@@ -1,0 +1,8 @@
+package objetos;
+
+public class Anillos extends Objetos{
+		public Anillos(Objeto objeto) {
+			
+		}
+
+}
