@@ -1,4 +1,4 @@
-package menuPersonajes;
+package personaje;
 
 import java.util.Scanner;
 

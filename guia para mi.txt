@@ -1,0 +1,22 @@
+Al final me decanto por guardar el sistema de combate y desppues de eso crear los boses 
+-lo malo hay que crear los boses a mano ya que asi se puede difrerenciar de los jefes princiaples/secundarios o dejalos creados en el array list y separarlos en dos en otra clase 
+-los objetos hay que crearlos y crgarlos en un arraylist y para eso hay que meterlos ya cargaos en otros, opcion de 
+crearlos y seprarlos descarta ya que cada uno tienes sus propios atributos
+-el sistema de combate hay un 70% de tener que cavbiarlo pero la esturctura esta hecha
+-para la creacion y el array de objetos del personaje lo dejo exactamente igual ya que se puede estropear 
+-copiar los  menus lo hare solo que tendre que eliminarmuchas cosas y ademas de eso habra que adaptarlos(lo dejo para lo ultimo)
+----------------------------tareas-------------------------------------------
+-objetos(
+armaduras 0%
+armas%
+hechizos%
+dejo algunos creados que no sean armas y demas para poder hacer un buscar,eliminar.....
+metodo ordenar por potrccion/daño de armas
+)
+-jefes (crearlos y darlos de alta para el array list (sefguuir usando array de obejtos))
+-personaje (hacer clases con enum)
+-hacer try/catch
+
+!!!!!!!!!!!!!!!
+-los 3 for,foreach  e iterator
+-metodo dentro de metodo y comopsicion en armas  y ramudras con jefes

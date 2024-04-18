@@ -4,7 +4,7 @@
  * el estado es un atributo el cual el jugador no tendra acceso y no podra modifcar
  */
 
-package clases;
+package personaje;
 
 public class Personaje {
 	private String nombre;

@@ -4,53 +4,25 @@ public class Anillos extends Objetos{
 	
 	
 
-	private String maldicion;
-	private String beneficios;
-	private float peso;
+	private int cantidadVidaAlterada;
+	private int cantidadDanioAlterado;
+	private double peso;
 	
 	
-	public Anillos(String nombre, String lore,String maldicion,String beneficios,float peso) {
+	public Anillos(String nombre,String lore, int cantidadVidaAlterada,int cantidadDanioAlterado,double peso2) {
 		super(nombre, lore);
-		this.maldicion=maldicion;
-		this.beneficios=beneficios;
-		this.peso=peso;
+		this.cantidadVidaAlterada=cantidadVidaAlterada;
+		this.cantidadDanioAlterado=cantidadDanioAlterado;
+		this.peso=peso2;
 		// TODO Auto-generated constructor stub
 	}
 
 
 
-	/**
-	 * @return the maldicion
-	 */
-	public String getMaldicion() {
-		return maldicion;
-	}
 
 
-	/**
-	 * @param maldicion the maldicion to set
-	 */
-	public void setMaldicion(String maldicion) {
-		this.maldicion = maldicion;
-	}
 
-
-	/**
-	 * @return the beneficios
-	 */
-	public String getBeneficios() {
-		return beneficios;
-	}
-
-
-	/**
-	 * @param beneficios the beneficios to set
-	 */
-	public void setBeneficios(String beneficios) {
-		this.beneficios = beneficios;
-	}
-
-
+	
 	/**
 	 * @return the durabilidad
 	 */
@@ -72,8 +44,8 @@ public class Anillos extends Objetos{
 	 */
 	@Override
 	public String toString() {
-		return "Anillo llamado " + nombre + " que tiene una  maldicion llamda " + maldicion + ", con los  beneficios de" 
-				+ beneficios + ", la durabilidad " + durabilidad
+		return "Anillo llamado " + nombre + " que te altera tu PS en  " + cantidadVidaAlterada + ", y que te altera el daño de tal forma" 
+				+ cantidadDanioAlterado 
 				+ "y el siguiente  lore" + lore ;
 	}
 	
