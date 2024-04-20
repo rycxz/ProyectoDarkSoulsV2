@@ -4,4 +4,8 @@
 <fullyQualifiedTypeName name="jefes.Jefes"/>
 <fullyQualifiedTypeName name="java.util.ArrayList"/>
 <fullyQualifiedTypeName name="objetos.Anillos"/>
+<fullyQualifiedTypeName name="objetos.Armaduras"/>
+<fullyQualifiedTypeName name="objetos.Armas"/>
+<fullyQualifiedTypeName name="jefes.JefesSecundarios"/>
+<fullyQualifiedTypeName name="jefes.JefesPrincipales"/>
 </qualifiedTypeNameHistroy>

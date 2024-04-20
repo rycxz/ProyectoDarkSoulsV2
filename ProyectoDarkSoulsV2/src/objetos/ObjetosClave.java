@@ -1,5 +1,5 @@
 package objetos;
 
-public class ObjetosClave {
+public class ObjetosClave extends Objetos{
 
 }

@@ -1,0 +1,23 @@
+package cargaDatosObjetos;
+
+import java.util.ArrayList;
+
+import objetos.Anillos;
+
+public class CargaDatosArmaduras {
+	public ArrayList<Anillos> caraDatos() {
+		
+		String[] nombreAraduras = { };
+		int[] proteccion = { 130, 120, 010, 150, 120, 90, 106, 130, 200, 310, 111, 113, 140 };
+		String[] lore = { };
+		double[] peso = { 0.2 ,0.4 ,0.9, 0.1, 0.5 , 0.7, 0.44 , 0.7,0.4,0.56,0.32,0.12,0.34};
+
+		ArrayList<Anillos> anillos = new ArrayList<>();
+		for (int i = 0; i < nombreAnillosDanVida.length; i++) {
+			anillos.add(new Anillos(nombreAnillosDanVida[i],lore[i],cantidadVidaAlteradaAnillos[i],cantidadDanioAlteradoAnillos[i],peso[i]));
+		}
+		return anillos;
+
+	}
+
+}

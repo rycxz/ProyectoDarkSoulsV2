@@ -13,19 +13,6 @@ package main;
 
 import java.util.Scanner;
 
-import acciones.Combates;
-import cargaDatos.CargaDatosJefes;
-import cargaDatos.CargaDatosObjetos;
-import cargaDatos.CargaDatosZonas;
-import clases.Jefes;
-import clases.Objetos;
-import clases.Personaje;
-import clases.Zonas;
-import menuJefes.MenuInfoBoses;
-import menuObjetos.MenuIfnoObjetos;
-import menuPersonajes.MenuCrearPersonaje;
-import menuPersonajes.MenuPersonaje;
-import menuZonas.MenuInfoZonas;
 
 
 public class Principal {

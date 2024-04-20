@@ -5,7 +5,6 @@ import jefes.Jefes;
 public class Objetos {
 		protected String nombre;
 		protected String lore;
-		protected double durabilidad;
 		protected Jefes perteneciaJefe;
 		
 		
@@ -27,25 +26,14 @@ public class Objetos {
 			this.lore = lore;
 		}
 		
-		public Objetos(String nombre, String lore, double durabilidad, Jefes perteneciaJefe) {
+		public Objetos(String nombre, String lore,Jefes perteneciaJefe) {
 			super();
 			this.nombre = nombre;
 			this.lore = lore;
-			this.durabilidad = durabilidad;
+		
 			this.perteneciaJefe = perteneciaJefe;
 		}
-		/**
-		 * @return the durabilidad
-		 */
-		public double getDurabilidad() {
-			return durabilidad;
-		}
-		/**
-		 * @param peso the durabilidad to set
-		 */
-		public void setDurabilidad(double durabilidad) {
-			this.durabilidad = durabilidad;
-		}
+	
 		/**
 		 * @return the perteneciaJefe
 		 */
@@ -63,13 +51,10 @@ public class Objetos {
 		 */
 		@Override
 		public String toString() {
-			return "El objetos es " + nombre + ", su lore es " + lore + ",el  peso es" + durabilidad + "y  pertenecia al Jefe"
+			return "El objetos es " + nombre + ", su lore es " + lore + "y  pertenecia al Jefe"
 					+ perteneciaJefe + "]";
 		}
-		public double estaRota(double desgaste ) {
-			durabilidad += desgaste;
-			return durabilidad;
-		}
+	
 		
 		
 

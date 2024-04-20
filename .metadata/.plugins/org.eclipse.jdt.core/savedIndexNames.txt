@@ -3,6 +3,7 @@ INDEX VERSION 1.131+C:\Users\recur\Desktop\ProyectoDarkSoulsV2\.metadata\.plugin
 2071462652.index
 2758576337.index
 743109110.index
+1600368182.index
 2194716159.index
 1552878334.index
 401767567.index

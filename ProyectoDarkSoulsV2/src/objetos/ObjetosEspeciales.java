@@ -1,5 +1,5 @@
 package objetos;
 
-public class ObjetosEspeciales {
+public class ObjetosEspeciales extends Objetos{
 
 }

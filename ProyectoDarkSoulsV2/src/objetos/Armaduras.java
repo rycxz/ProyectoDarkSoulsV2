@@ -2,27 +2,27 @@ package objetos;
 
 public class Armaduras extends Objetos{
 	
-	private String proteccion;
-	private int peso;
+	private double proteccion;
+	private double peso;
 	
-	public Armaduras(String nombre, String lore,String proteccion,int peso) {
+	public Armaduras(String nombre, String lore,double proteccion,double peso2) {
 		super(nombre, lore);
 		// TODO Auto-generated constructor stub
 		this.proteccion=proteccion;
-		this.peso= peso;
+		this.peso= peso2;
 	}
 
 	/**
 	 * @return the proteccion
 	 */
-	public String getProteccion() {
+	public double getProteccion() {
 		return proteccion;
 	}
 	
 	/**
 	 * @return the peso
 	 */
-	public int getPeso() {
+	public double getPeso() {
 		return peso;
 	}
 
@@ -33,14 +33,14 @@ public class Armaduras extends Objetos{
 	/**
 	 * @param proteccion the proteccion to set
 	 */
-	public void setProteccion(String proteccion) {
+	public void setProteccion(double proteccion) {
 		this.proteccion = proteccion;
 	}
 
 	/**
 	 * @param peso the peso to set
 	 */
-	public void setPeso(int peso) {
+	public void setPeso(double peso) {
 		this.peso = peso;
 	}
 	@Override
@@ -48,7 +48,7 @@ public class Armaduras extends Objetos{
 		return "Armaduras su nombre es "+nombre+",su proteccion es" + proteccion + ",con un peso de" + peso 
 				+ ", una durabilidad de " + durabilidad + "y  pertenecia al Jefe " + perteneciaJefe ;
 	}
-	public String tipoArmaduraSegunPeso (int peso) {
+	public String tipoArmaduraSegunPeso (double peso) {
 		if(peso>0 && peso<20 ) {
 			return "super lijera";
 		}
@@ -61,7 +61,7 @@ public class Armaduras extends Objetos{
 		if(peso>0 && peso>50 ) {
 			return "pesada";
 		}
-		return proteccion;
+		return null;
 		
 	}
 

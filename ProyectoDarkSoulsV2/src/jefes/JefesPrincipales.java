@@ -5,12 +5,13 @@ public class JefesPrincipales extends Jefes{
 	 *  los parametros recibiods por el constructor que son heredados
 	 * @param nombre
 	 * @param tipo
+	 * @param lore
 	 * @param vida
 	 * @param ataque
 	 */
 
-	public JefesPrincipales(String nombre, String tipo, int vida, int ataque) {
-		super(nombre, tipo, vida, ataque);
+	public JefesPrincipales(String nombre, String tipo,String informacionBreve, int vida, int ataque) {
+		super(nombre, tipo,informacionBreve, vida, ataque);
 		// TODO Auto-generated constructor stub
 	}
 
