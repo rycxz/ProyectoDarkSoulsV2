@@ -1,0 +1,5 @@
+package personaje;
+
+public enum ClasesPersonaje {
+	GUERRERO, CABALLERO, VAGABUNDO, LADRÓN, BANDIDO, CAZADOR, HECHIZERO, PIROMÁNTICO, CLÉRIGO, MARGINADO
+}

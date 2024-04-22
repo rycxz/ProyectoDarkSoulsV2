@@ -1,7 +1,7 @@
-package menuPersonajes;
+package personaje;
 
 import java.util.Scanner;
-import clases.Personaje;
+
 import comprobacionEntrada.Comprobaciones;
 
 public class MenuCrearPersonaje {
@@ -10,25 +10,26 @@ public class MenuCrearPersonaje {
 
 	/**
 	 * 
-	 * mostramos el menu de creación de personaje y le damos valor al objeto
-	 *         de personaje
+	 * mostramos el menu de creación de personaje y le damos valor al objeto de
+	 * personaje
 	 * 
-	 *         y este metodo nos devuelve el objeto Personaje con todos sus
-	 *         valores ya creados utilzando su constructor
+	 * y este metodo nos devuelve el objeto Personaje con todos sus valores ya
+	 * creados utilzando su constructor
 	 * 
 	 * @return Personaje devuelve el personaje principal ya creado con los datos
 	 * 
-	 *         
+	 * 
 	 * 
 	 * 
 	 */
 	public static Personaje crearPersonaje() {
 		String nombre;
 		String sexo;
-		String clase = null;
-		int[] vidaClases =  {0,300,500,250,275,400,350,150,350,200,500};
-		int[] ataqueClases =  {0,800,500,750,975,500,650,650,550,800,900};
-		int vida = 0 ;
+		ClasesPersonaje clase = null;
+		String claseIntroduccion;
+		int[] vidaClases = { 0, 300, 500, 250, 275, 400, 350, 150, 350, 200, 500 };
+		int[] ataqueClases = { 0, 800, 500, 750, 975, 500, 650, 650, 550, 800, 900 };
+		int vida = 0;
 		int ataque = 0;
 		int numClase = 0;
 
@@ -38,92 +39,115 @@ public class MenuCrearPersonaje {
 		System.out.println();
 		System.out.println("Digame el nombre para su personaje.");
 		nombre = letras.nextLine();
-		nombre =Comprobaciones.comprobacionNombre(nombre);
+		nombre = Comprobaciones.comprobacionNombre(nombre);
 		System.out.println(
 				"----------------------------------------------------------------------------------------------------------------------------------------------------");
 
 		System.out.println("Digame el sexo para su personaje (Hombre/Mujer).");
 		sexo = letras.nextLine();
-		sexo =Comprobaciones.comprobacionSexo(sexo);
+		sexo = Comprobaciones.comprobacionSexo(sexo);
 
 		do {
 
 			System.out.println("Digame la clase para su personaje.");
 			System.out.println("Las opciones son:");
-			System.out.println("1-Guerrero");
-			System.out.println("2-Caballero");
-			System.out.println("3-Vagabundo");
-			System.out.println("4-Ladron");
-			System.out.println("5-Bandio");
-			System.out.println("6-Cazador");
-			System.out.println("7-Hechizero");
-			System.out.println("8-Piromantico");
-			System.out.println("9-Clerigo");
-			System.out.println("10-Marginado");
-			numClase = numeros.nextInt();
+			System.out.println("Guerrero");
 
-			switch (numClase) {
-			case 1:
-				System.out.println("Intrépido guerrero.\r\n" + "Experto en las armas.\r\n" + "Gran fuerza y destreza.");
-				clase = "Guerrero";
+			System.out.println("Caballero");
+
+			System.out.println("Vagabundo");
+
+			System.out.println("Ladron");
+
+			System.out.println("Bandio");
+
+			System.out.println("Cazador");
+
+			System.out.println("Hechizero");
+
+			System.out.println("Piromantico");
+
+			System.out.println("Clerigo");
+
+			System.out.println("Marginado");
+
+			claseIntroduccion = letras.nextLine();
+			claseIntroduccion.toLowerCase();
+
+			switch (claseIntroduccion) {
+			case "guerrero":
+				numClase=1;
+				System.out
+						.println("Intrépido guerrero.\r\n" + "Experto en las armas.\r\n" + "Gran fuerza y destreza.");
+				clase = ClasesPersonaje.GUERRERO;
 				vida = vidaClases[numClase];
-				ataque =ataqueClases[numClase];
+				ataque = ataqueClases[numClase];
 				break;
-			case 2:
+			case "caballero":
+				numClase=2;
 				System.out.println("Caballero de baja categoría.\r\n" + "Altos PS, armadura sólida.\r\n"
 						+ "No es fácil de derribar.");
-				clase = "Caballero";
+				clase = ClasesPersonaje.CABALLERO;
 				vida = vidaClases[numClase];
-				ataque =ataqueClases[numClase];
+				ataque = ataqueClases[numClase];
 				break;
-			case 3:
+			case "vagabundo":
+				numClase=3;
 				System.out.println("Peregrino sin rumbo.\r\n" + "Lleva una cimitarra.\r\n" + "Gran destreza.");
-				clase = "Vagabundo";
+				clase = ClasesPersonaje.VAGABUNDO;
 				vida = vidaClases[numClase];
-				ataque =ataqueClases[numClase];
+				ataque = ataqueClases[numClase];
 				break;
-			case 4:
-				System.out.println("Con remordimientos.\r\n" + "Impactos críticos altos.\r\n" + "Tiene llave maestra.");
-				clase = "Ladron";
-				vida = vidaClases[numClase];
-				ataque =ataqueClases[numClase];
-				break;
-			case 5:
-				System.out.println("Bandido salvaje.\r\n" + "Gran fuerza.\r\n" + "Lleva una pesada hacha de guerra.");
-				clase = "Bandio";
-				vida = vidaClases[numClase];
-				ataque =ataqueClases[numClase];
-				break;
-			case 6:
-				System.out.println("Caza con arco.\r\n" + "Lucha a corta distancia.\r\n" + "No es bueno con la magia.");
-				clase = "Cazador";
-				vida = vidaClases[numClase];
-				ataque =ataqueClases[numClase];
-				break;
-			case 7:
-				System.out.println("De la Escuela de Dragones de Vinheim.\r\n" + "Usa magia de Almas.");
-				clase = "Hechizero";
-				vida = vidaClases[numClase];
-				ataque =ataqueClases[numClase];
-				break;
-			case 8:
+			case "ladron":
+				numClase=4;
 				System.out
-						.println("Piromántico del Gran Pantano.\r\n" + "Tira hechizos de fuego y porta hacha de mano.");
-				clase = "Piromantico";
+						.println("Con remordimientos.\r\n" + "Impactos críticos altos.\r\n" + "Tiene llave maestra.");
+				clase = ClasesPersonaje.LADR�N;
 				vida = vidaClases[numClase];
-				ataque =ataqueClases[numClase];
+				ataque = ataqueClases[numClase];
 				break;
-			case 9:
+			case "bandio":
+				numClase=5;
+				System.out.println("Bandido salvaje.\r\n" + "Gran fuerza.\r\n" + "Lleva una pesada hacha de guerra.");
+				clase = ClasesPersonaje.BANDIDO;
+				vida = vidaClases[numClase];
+				ataque = ataqueClases[numClase];
+				break;
+			case "cazador":
+				numClase=6;
+				System.out.println("Caza con arco.\r\n" + "Lucha a corta distancia.\r\n" + "No es bueno con la magia.");
+				clase = ClasesPersonaje.CAZADOR;
+				vida = vidaClases[numClase];
+				ataque = ataqueClases[numClase];
+				break;
+			case "hechizero":
+				numClase=7;
+				System.out.println("De la Escuela de Dragones de Vinheim.\r\n" + "Usa magia de Almas.");
+				clase = ClasesPersonaje.HECHIZERO;
+				vida = vidaClases[numClase];
+				ataque = ataqueClases[numClase];
+				break;
+			case "piromantico":
+				numClase=8;
+				System.out.println(
+						"Piromántico del Gran Pantano.\r\n" + "Tira hechizos de fuego y porta hacha de mano.");
+				clase = ClasesPersonaje.HECHIZERO;
+				vida = vidaClases[numClase];
+				ataque = ataqueClases[numClase];
+				break;
+			case "clerigo":
+				numClase=9;
 				System.out.println("Clérigo peregrino.\r\n" + "Tiene una maza.\r\n" + "Hace milagros curativos");
-				clase = "Clerigo";
+				clase = ClasesPersonaje.CL�RIGO;
 				vida = vidaClases[numClase];
-				ataque =ataqueClases[numClase];
+				ataque = ataqueClases[numClase];
 				break;
-			case 10:
+			case "marginado":
+				numClase=10;
 				System.out.println("Enigma sin ropa.\r\n" + "Armado solo con un garrote y un viejo escudo de tablas.");
-				clase = "Marginado";
+				clase = ClasesPersonaje.MARGINADO;
 				vida = vidaClases[numClase];
-				ataque =ataqueClases[numClase];
+				ataque = ataqueClases[numClase];
 				break;
 			default:
 				System.out.println("opcion no valida.");
@@ -186,7 +210,7 @@ public class MenuCrearPersonaje {
 		System.out.println(
 				"--------------------------------------------------------------------------------------------------------------------------------");
 
-		Personaje personaje = new Personaje(nombre, sexo, clase,vida,ataque);
+		Personaje personaje = new Personaje(nombre, sexo, clase, vida, ataque);
 		return personaje;
 
 	}

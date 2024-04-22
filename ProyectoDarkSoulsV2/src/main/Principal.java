@@ -13,6 +13,9 @@ package main;
 
 import java.util.Scanner;
 
+import personaje.MenuCrearPersonaje;
+import personaje.Personaje;
+
 
 
 public class Principal {

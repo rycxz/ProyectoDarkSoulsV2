@@ -2,9 +2,9 @@ package personaje;
 
 import java.util.Scanner;
 
-import clases.Personaje;
+import personaje.Personaje;
 import comprobacionEntrada.Comprobaciones;
-import otros.CambiarAtributosPersonaje;
+import personaje.CambiarAtributosPersonaje;
 
 public class MenuPersonaje {
 	static   Scanner numeros = new Scanner(System.in);
@@ -126,7 +126,7 @@ public class MenuPersonaje {
 				CambiarAtributosPersonaje.cambiarSexo(personajePrincipal, sexoCambiar);
 				break;
 			case 3:
-				CambiarAtributosPersonaje.cambiarClase(personajePrincipal);
+				CambiarAtributosPersonaje.cambiarClase(personajePrincipal, letras);
 				break;
 			case 4:
 				System.out.println("ha salido");

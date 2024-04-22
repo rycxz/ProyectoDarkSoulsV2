@@ -46,7 +46,7 @@ public class Armaduras extends Objetos{
 	@Override
 	public String toString() {
 		return "Armaduras su nombre es "+nombre+",su proteccion es" + proteccion + ",con un peso de" + peso 
-				+ ", una durabilidad de " + durabilidad + "y  pertenecia al Jefe " + perteneciaJefe ;
+				  + "y  pertenecia al Jefe " + perteneciaJefe ;
 	}
 	public String tipoArmaduraSegunPeso (double peso) {
 		if(peso>0 && peso<20 ) {

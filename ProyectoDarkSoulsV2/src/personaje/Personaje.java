@@ -9,11 +9,11 @@ package personaje;
 public class Personaje {
 	private String nombre;
 	private String sexo;
-	private String clase;
+	private ClasesPersonaje clase;
 	private int vida;
 	private int ataque;
 
-	public Personaje(String nombre, String sexo, String clase, int vida, int ataque) {
+	public Personaje(String nombre, String sexo, ClasesPersonaje clase, int vida, int ataque) {
 		this.nombre = nombre;
 		this.sexo = sexo;
 		this.clase = clase;
@@ -37,11 +37,11 @@ public class Personaje {
 		this.sexo = sexo;
 	}
 
-	public String getClase() {
+	public ClasesPersonaje getClase() {
 		return clase;
 	}
 
-	public void setClase(String clase) {
+	public void setClase(ClasesPersonaje clase) {
 		this.clase = clase;
 	}
 

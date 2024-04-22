@@ -2,7 +2,7 @@ package salidaDatos;
 
 import java.util.Scanner;
 
-import clases.Jefes;
+import jefes.Jefes;
 
 public class SalidaDatosJefes {
 	static Scanner numeros = new Scanner(System.in);

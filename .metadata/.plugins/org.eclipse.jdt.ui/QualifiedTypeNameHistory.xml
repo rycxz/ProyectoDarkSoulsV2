@@ -8,4 +8,6 @@
 <fullyQualifiedTypeName name="objetos.Armas"/>
 <fullyQualifiedTypeName name="jefes.JefesSecundarios"/>
 <fullyQualifiedTypeName name="jefes.JefesPrincipales"/>
+<fullyQualifiedTypeName name="personaje.MenuCrearPersonaje"/>
+<fullyQualifiedTypeName name="personaje.Personaje"/>
 </qualifiedTypeNameHistroy>

@@ -1,6 +1,6 @@
 package otros;
 
-import clases.Jefes;
+import jefes.Jefes;
 
 public class OrdenarJefes {
 	/**

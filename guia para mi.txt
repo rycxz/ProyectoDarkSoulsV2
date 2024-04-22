@@ -7,14 +7,15 @@ crearlos y seprarlos descarta ya que cada uno tienes sus propios atributos
 -copiar los  menus lo hare solo que tendre que eliminarmuchas cosas y ademas de eso habra que adaptarlos(lo dejo para lo ultimo)
 ----------------------------tareas-------------------------------------------
 -objetos(
-armaduras 0%
-armas%
-hechizos%
-dejo algunos creados que no sean armas y demas para poder hacer un buscar,eliminar.....
-metodo ordenar por potrccion/daño de armas
+armaduras 100%
+armas100%
+anilos 100%
+
+ hacer un buscar,eliminar..... de cada uno espada , anillos (usar aliterator) para buscar los objetos el aliterator
+metodo ordenar por potrccion/daño de armas (eso se hara en el main a la hora de crearlo)
 )
 -jefes (crearlos y darlos de alta para el array list (sefguuir usando array de obejtos))
--personaje (hacer clases con enum)
+-personaje 100%
 -hacer try/catch
 
 !!!!!!!!!!!!!!!
