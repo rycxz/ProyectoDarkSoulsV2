@@ -5,7 +5,7 @@ import java.util.ArrayList;
 import objetos.Anillos;
 
 public class CargaDatosAnillos {
-	public ArrayList<Anillos> caraDatos() {
+	public  static ArrayList<Anillos> caraDatos() {
 		String[] nombreAnillosDanVida = { "Anillo de Acero de Protección", "Anillo de Acero de Protección Azul",
 				"Anillo de Corazón de Hueso de Dragón", "Anillo de Corazón de Hierro", "Anillo de Corazón de Plata",
 				"Anillo de Corazón de Sombra", "Anillo de Corazón de Veneno", "Anillo de Corazón de Víbora",

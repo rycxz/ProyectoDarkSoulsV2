@@ -1,12 +1,21 @@
 package objetos;
 
+import jefes.JefesPrincipales;
+import jefes.JefesSecundarios;
+
 public class Armaduras extends Objetos{
 	
 	private double proteccion;
 	private double peso;
+	public Armaduras(String nombre, String lore,JefesPrincipales jefesPrincipales, double proteccion,double peso2) {
+		super(nombre, lore,jefesPrincipales);
+		// TODO Auto-generated constructor stub
+		this.proteccion=proteccion;
+		this.peso= peso2;
+	}
 	
-	public Armaduras(String nombre, String lore,double proteccion,double peso2) {
-		super(nombre, lore);
+	public Armaduras(String nombre, String lore,JefesSecundarios jefesSecundarios, double proteccion,double peso2) {
+		super(nombre, lore,jefesSecundarios);
 		// TODO Auto-generated constructor stub
 		this.proteccion=proteccion;
 		this.peso= peso2;

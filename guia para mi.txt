@@ -16,6 +16,7 @@ metodo ordenar por potrccion/daño de armas (eso se hara en el main a la hora de
 )
 -jefes (crearlos y darlos de alta para el array list (sefguuir usando array de obejtos))
 -personaje 100%
+-ya esta todo dado de alta y algunos arreglos mas
 -hacer try/catch
 
 !!!!!!!!!!!!!!!

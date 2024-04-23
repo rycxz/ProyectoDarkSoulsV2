@@ -11,8 +11,19 @@
 package main;
 
 
+import java.util.ArrayList;
 import java.util.Scanner;
 
+import cargaDatosObjetos.CargaDatosAnillos;
+import cargaDatosObjetos.CargaDatosArmaduras;
+import cargaDatosObjetos.CargaDatosArmas;
+import jefes.CargaDatosJefes;
+import jefes.JefesPrincipales;
+import jefes.JefesSecundarios;
+import menus.ElecionObjetos;
+import objetos.Anillos;
+import objetos.Armaduras;
+import objetos.Armas;
 import personaje.MenuCrearPersonaje;
 import personaje.Personaje;
 
@@ -30,15 +41,18 @@ public class Principal {
 		Personaje personajePrincipal = MenuCrearPersonaje.crearPersonaje();
 		System.out.println();
 		//damos de alta a todos los jefes
-		Jefes[] todosJefes = CargaDatosJefes.cargarContenidoJefes();
+		ArrayList<JefesPrincipales> todosJefesPrincipales = CargaDatosJefes.cargarContenidoJefesPrincipales();
+		ArrayList<JefesSecundarios> todosJefesSecundarios = CargaDatosJefes.cargarContenidoJefesSecundarios();
 		System.out.println();
-		//damos de alta todas las zonas
-		Zonas[] todasZonas = CargaDatosZonas.cargoZonasDatos();
-		
 		//damos de alta todos los objetos
-		Objetos[] todosObjetos = CargaDatosObjetos.cargoDatosObjetos();
-	
-		
+		ArrayList<Anillos> anillos = CargaDatosAnillos.caraDatos();
+		//damos de alta las armaduras
+		ArrayList<Armaduras> armaduraPrimarias = CargaDatosArmaduras.cargaDatosArmadurasPrimarias(todosJefesPrincipales); 
+		ArrayList<Armaduras> armaduraSecundarias = CargaDatosArmaduras.cargaDatosArmadurasSecundarias(todosJefesSecundarios);
+		//damos de alta las armas
+		ArrayList<Armas> armasPrimarias = CargaDatosArmas.caraDatosJefesPrinciaples(todosJefesPrincipales);
+		ArrayList<Armas> armasSecundarias = CargaDatosArmas.caraDatosJefesSecundarios(todosJefesSecundarios);
+		ElecionObjetos.elecionItemPesrosnaje(personajePrincipal,anillos,armaduraPrimarias,armaduraSecundarias,armasPrimarias,armasSecundarias,numerosMenuPrincipal);
 		int numMenu=0;
 		do {
 		System.out.println("Opciones a elegir:");

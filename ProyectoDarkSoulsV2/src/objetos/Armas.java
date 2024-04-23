@@ -1,6 +1,8 @@
 package objetos;
 
-import jefes.Jefes;
+
+import jefes.JefesPrincipales;
+import jefes.JefesSecundarios;
 
 public class Armas extends Objetos {
 	
@@ -10,7 +12,16 @@ public class Armas extends Objetos {
 	private String tipoDanio;
 	private double peso;
 	
-	public Armas(String nombre, String lore, Jefes perteneciaJefe,String tipoArama,int danio,String tipoDanio,double peso) {
+	public Armas(String nombre, String lore, JefesPrincipales perteneciaJefe,String tipoArama,int danio,String tipoDanio,double peso) {
+		super(nombre, lore, perteneciaJefe);
+		// TODO Auto-generated constructor stub
+		this.tipoArama=tipoArama;
+		this.danio=danio;
+		this.tipoDanio=tipoDanio;
+		this.peso=peso;
+		
+	}
+	public Armas(String nombre, String lore, JefesSecundarios perteneciaJefe,String tipoArama,int danio,String tipoDanio,double peso) {
 		super(nombre, lore, perteneciaJefe);
 		// TODO Auto-generated constructor stub
 		this.tipoArama=tipoArama;

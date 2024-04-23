@@ -1,13 +1,17 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
 <fullyQualifiedTypeName name="clases.Personaje"/>
-<fullyQualifiedTypeName name="jefes.Jefes"/>
-<fullyQualifiedTypeName name="java.util.ArrayList"/>
-<fullyQualifiedTypeName name="objetos.Anillos"/>
-<fullyQualifiedTypeName name="objetos.Armaduras"/>
-<fullyQualifiedTypeName name="objetos.Armas"/>
-<fullyQualifiedTypeName name="jefes.JefesSecundarios"/>
-<fullyQualifiedTypeName name="jefes.JefesPrincipales"/>
 <fullyQualifiedTypeName name="personaje.MenuCrearPersonaje"/>
 <fullyQualifiedTypeName name="personaje.Personaje"/>
+<fullyQualifiedTypeName name="java.util.ArrayList"/>
+<fullyQualifiedTypeName name="jefes.CargaDatosJefes"/>
+<fullyQualifiedTypeName name="cargaDatosObjetos.CargaDatosAnillos"/>
+<fullyQualifiedTypeName name="objetos.Anillos"/>
+<fullyQualifiedTypeName name="cargaDatosObjetos.CargaDatosArmaduras"/>
+<fullyQualifiedTypeName name="objetos.Armaduras"/>
+<fullyQualifiedTypeName name="jefes.JefesSecundarios"/>
+<fullyQualifiedTypeName name="jefes.JefesPrincipales"/>
+<fullyQualifiedTypeName name="jefes.Jefes"/>
+<fullyQualifiedTypeName name="cargaDatosObjetos.CargaDatosArmas"/>
+<fullyQualifiedTypeName name="objetos.Armas"/>
 </qualifiedTypeNameHistroy>

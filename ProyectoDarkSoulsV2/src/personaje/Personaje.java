@@ -12,13 +12,15 @@ public class Personaje {
 	private ClasesPersonaje clase;
 	private int vida;
 	private int ataque;
+	private int capacidadCarga;
 
-	public Personaje(String nombre, String sexo, ClasesPersonaje clase, int vida, int ataque) {
+	public Personaje(String nombre, String sexo, ClasesPersonaje clase, int vida, int ataque, int capacidadCarga) {
 		this.nombre = nombre;
 		this.sexo = sexo;
 		this.clase = clase;
 		this.vida = vida;
 		this.ataque = ataque;
+		this.capacidadCarga = capacidadCarga;
 	}
 
 	public String getNombre() {
@@ -63,8 +65,23 @@ public class Personaje {
 
 	@Override
 	public String toString() {
-		return "Tu personaje se llama: " + nombre + " y es del sexo: " + sexo + ", es de la Clase " + clase
-				+ ", tiene " + vida + " puntos de vida" + " , y hace " + ataque + " puntos de ataque ";
+		return "Tu personaje se llama: " + nombre + " y es del sexo: " + sexo + ", es de la Clase " + clase + ", tiene "
+				+ vida + " puntos de vida" + " , y hace " + ataque + " puntos de ataque " + "puediendo cargar hasta "
+				+ capacidadCarga + " kgs";
+	}
+
+	/**
+	 * @return the capacidadCarga
+	 */
+	public int getCapacidadCarga() {
+		return capacidadCarga;
+	}
+
+	/**
+	 * @param capacidadCarga the capacidadCarga to set
+	 */
+	public void setCapacidadCarga(int capacidadCarga) {
+		this.capacidadCarga = capacidadCarga;
 	}
 
 }

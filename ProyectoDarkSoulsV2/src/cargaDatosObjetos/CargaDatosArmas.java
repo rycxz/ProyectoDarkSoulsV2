@@ -7,7 +7,7 @@ import jefes.JefesSecundarios;
 import objetos.Armas;
 
 public class CargaDatosArmas {
-	public ArrayList<Armas> caraDatosJefesPrinciaples(ArrayList<JefesPrincipales> jefes) {
+	public  static ArrayList<Armas> caraDatosJefesPrinciaples(ArrayList<JefesPrincipales> jefes) {
 		String[] nombre = { "Lanza Dragón", "Gran Mazo de Smough", "Gran Espada del Señor de la Ceniza",
 				"Gran Espada de Artorias", "Espada Oscura del Rey" };
 		String[] lore = {
@@ -29,7 +29,7 @@ public class CargaDatosArmas {
 
 	}
 
-	public ArrayList<Armas> caraDatosJefesSecundarios(ArrayList<JefesSecundarios> jefes) {
+	public static ArrayList<Armas> caraDatosJefesSecundarios(ArrayList<JefesSecundarios> jefes) {
 		String[] nombre = { "Gran Mazo de Havel", "Espada recta de los Guardianes", "Gran hacha de Gólem",
 				"Gran hacha de Capra", "Arco lunar" };
 		String[] lore = {
