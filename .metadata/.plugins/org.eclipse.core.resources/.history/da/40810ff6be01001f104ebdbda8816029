@@ -1,0 +1,64 @@
+package menus;
+
+import java.util.ArrayList;
+import java.util.Scanner;
+
+import comprobacionEntrada.Comprobaciones;
+import jefes.JefesPrincipales;
+import objetos.Anillos;
+import objetos.Armaduras;
+import objetos.Armas;
+import personaje.Personaje;
+
+public class ElecionObjetos {
+
+	public static void elecionItemPesrosnaje(Personaje personajePrincipal, ArrayList<Anillos> anillos, ArrayList<Armaduras> armaduraPrimarias,
+			ArrayList<Armaduras> armaduraSecundarias, ArrayList<Armas> armasPrimarias,
+			ArrayList<Armas> armasSecundarias, Scanner numeros, Scanner letras) {
+		System.out.println("Antes de cotinuar tienes que elegir tus obejtos para tu desafio ");
+		System.out.println("////////////////////////////////////////////////////////////////////////////////////////////////////////////////");
+		for(int i =0 ; i<3;i++) {
+			switch (i) {
+			case 1:
+				System.out.println("Primero tienes que elgir tu anillo");
+				int opcionAnillos = 0;
+				for(Anillos anillosPersonaje:anillos) {
+					System.out.println("Dime el anillo que queres");
+					System.out.println(opcionAnillos + " - " + anillosPersonaje.toString());
+					
+				}
+				opcionAnillos=numeros.nextInt();
+				System.out.println("Quieres agregar un anillo?(Si/no)");
+				String elecionCrearAnillo = letras.nextLine();
+				elecionCrearAnillo =Comprobaciones.comprobacionNombre(elecionCrearAnillo);
+				if(elecionCrearAnillo.equalsIgnoreCase("si")) {
+					
+				}
+				personajePrincipal.pesoCargado(anillos.get(opcionAnillos).getPeso());
+				personajePrincipal.ataqueAlterado(anillos.get(opcionAnillos).getCantidadDanioAlterado());
+				personajePrincipal.vidaAlterada(anillos.get(opcionAnillos).getCantidadVidaAlterada());
+				break;
+			case 2:
+				System.out.println("Ahora tienes que elegir tu arma o crearte tu la tuya.");
+				System.out.println("Quieres crear tu espada (si/no)");
+				String elecionCrearEspada = letras.nextLine();
+				elecionCrearEspada =Comprobaciones.comprobacionNombre(elecionCrearEspada);
+				if(elecionCrearEspada.equalsIgnoreCase("si")) {
+					System.out.println("A que grupo la quieres agregar? ");
+					
+						String nombre = letras.nextLine();
+						String lore =  letras.nextLine();
+						
+						
+						
+						String tipoArama;int danio;String tipoDanio;double peso;
+						armasPrimarias.add(new Armas(nombre, lore, tipoArama, danio, tipoDanio, peso));
+					}
+				}
+			}
+		}
+	
+		
+	}
+
+

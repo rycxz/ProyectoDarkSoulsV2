@@ -12,9 +12,9 @@ public class Personaje {
 	private ClasesPersonaje clase;
 	private int vida;
 	private int ataque;
-	private int capacidadCarga;
+	private double capacidadCarga;
 
-	public Personaje(String nombre, String sexo, ClasesPersonaje clase, int vida, int ataque, int capacidadCarga) {
+	public Personaje(String nombre, String sexo, ClasesPersonaje clase, int vida, int ataque, double capacidadCarga) {
 		this.nombre = nombre;
 		this.sexo = sexo;
 		this.clase = clase;
@@ -73,15 +73,25 @@ public class Personaje {
 	/**
 	 * @return the capacidadCarga
 	 */
-	public int getCapacidadCarga() {
+	public double getCapacidadCarga() {
 		return capacidadCarga;
 	}
 
 	/**
 	 * @param capacidadCarga the capacidadCarga to set
 	 */
-	public void setCapacidadCarga(int capacidadCarga) {
+	public void setCapacidadCarga(double capacidadCarga) {
 		this.capacidadCarga = capacidadCarga;
+	}
+
+	public void pesoCargado(double pesoCosas) {
+		this.capacidadCarga += pesoCosas;
+	}
+	public void vidaAlterada(int vidaAlterada) {
+		this.vida += vidaAlterada;
+	}
+	public void ataqueAlterado(int ataqueAlterado) {
+		this.ataque += ataqueAlterado;
 	}
 
 }

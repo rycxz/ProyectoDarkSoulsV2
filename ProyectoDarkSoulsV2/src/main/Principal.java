@@ -37,6 +37,7 @@ public class Principal {
 
 	public static void main(String[] args) {
 		Scanner numerosMenuPrincipal = new Scanner(System.in);
+		Scanner letrasMenuPrincipal = new Scanner(System.in);
 		System.out.println("Lo primero vamos a crear tu personaje!");
 		Personaje personajePrincipal = MenuCrearPersonaje.crearPersonaje();
 		System.out.println();
@@ -52,7 +53,8 @@ public class Principal {
 		//damos de alta las armas
 		ArrayList<Armas> armasPrimarias = CargaDatosArmas.caraDatosJefesPrinciaples(todosJefesPrincipales);
 		ArrayList<Armas> armasSecundarias = CargaDatosArmas.caraDatosJefesSecundarios(todosJefesSecundarios);
-		ElecionObjetos.elecionItemPesrosnaje(personajePrincipal,anillos,armaduraPrimarias,armaduraSecundarias,armasPrimarias,armasSecundarias,numerosMenuPrincipal);
+		ElecionObjetos.elecionItemPesrosnaje(personajePrincipal,anillos,armaduraPrimarias,armaduraSecundarias,armasPrimarias,armasSecundarias,
+				numerosMenuPrincipal,letrasMenuPrincipal);
 		int numMenu=0;
 		do {
 		System.out.println("Opciones a elegir:");

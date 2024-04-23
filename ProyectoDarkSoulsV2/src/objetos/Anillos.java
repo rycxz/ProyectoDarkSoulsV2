@@ -48,6 +48,71 @@ public class Anillos extends Objetos{
 				+ cantidadDanioAlterado 
 				+ "y el siguiente  lore" + lore ;
 	}
+
+
+
+
+
+
+
+	/**
+	 * @return the cantidadVidaAlterada
+	 */
+	public int getCantidadVidaAlterada() {
+		return cantidadVidaAlterada;
+	}
+
+
+
+
+
+
+
+	/**
+	 * @param cantidadVidaAlterada the cantidadVidaAlterada to set
+	 */
+	public void setCantidadVidaAlterada(int cantidadVidaAlterada) {
+		this.cantidadVidaAlterada = cantidadVidaAlterada;
+	}
+
+
+
+
+
+
+
+	/**
+	 * @return the cantidadDanioAlterado
+	 */
+	public int getCantidadDanioAlterado() {
+		return cantidadDanioAlterado;
+	}
+
+
+
+
+
+
+
+	/**
+	 * @param cantidadDanioAlterado the cantidadDanioAlterado to set
+	 */
+	public void setCantidadDanioAlterado(int cantidadDanioAlterado) {
+		this.cantidadDanioAlterado = cantidadDanioAlterado;
+	}
+
+
+
+
+
+
+
+	/**
+	 * @param peso the peso to set
+	 */
+	public void setPeso(double peso) {
+		this.peso = peso;
+	}
 	
 	
 	

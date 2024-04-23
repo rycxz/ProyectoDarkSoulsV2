@@ -21,6 +21,13 @@ public class Armas extends Objetos {
 		this.peso=peso;
 		
 	}
+	public Armas(String nombre, String lore, String tipoArama, int danio, String tipoDanio, double peso) {
+		super(nombre, lore);
+		this.tipoArama = tipoArama;
+		this.danio = danio;
+		this.tipoDanio = tipoDanio;
+		this.peso = peso;
+	}
 	public Armas(String nombre, String lore, JefesSecundarios perteneciaJefe,String tipoArama,int danio,String tipoDanio,double peso) {
 		super(nombre, lore, perteneciaJefe);
 		// TODO Auto-generated constructor stub

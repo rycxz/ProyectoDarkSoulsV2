@@ -10,14 +10,22 @@ crearlos y seprarlos descarta ya que cada uno tienes sus propios atributos
 armaduras 100%
 armas100%
 anilos 100%
-
- hacer un buscar,eliminar..... de cada uno espada , anillos (usar aliterator) para buscar los objetos el aliterator
-metodo ordenar por potrccion/daño de armas (eso se hara en el main a la hora de crearlo)
-)
--jefes (crearlos y darlos de alta para el array list (sefguuir usando array de obejtos))
 -personaje 100%
--ya esta todo dado de alta y algunos arreglos mas
--hacer try/catch
+- menu de elecion incial de obejtos 100%
+
+--------------------por hacer
+
+adaptar main
+buscar eliminar jefes y objetos por cada tipo
+adaptar combates 
+try&catch
+sobreescribir un metodo 
+acabar documentacion
+
+
+
+
+
 
 !!!!!!!!!!!!!!!
 -los 3 for,foreach  e iterator
