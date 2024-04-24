@@ -122,6 +122,7 @@ public class CombateContraTodosLosJefes {
 					System.out.println("Suena el sonido de un frasco de estus, te has curando en una hoguera");
 					vidaPersonaje = personajePrincipal.getVida();
 				}
+			}
 
 				int vidaBoss = 9999;
 
@@ -179,18 +180,19 @@ public class CombateContraTodosLosJefes {
 						System.out.println("Le has dado, le queda " + vidaBoss);
 						saltoLinea.nextLine();
 					}
-
-				} while (vidaBoss > 0 && vidaPersonaje > 0);
+					
+					
+				} while (vidaBoss > 0 || vidaPersonaje > 0);
 				if (vidaPersonaje < 0) {
 					break;
 				}
 				System.out.println();
 				System.out.println();
 
-			}
+				}
 		}
 
-	}
+	
 
 	/**
 	 * este metodo repite lo de los anteriores pero te "cura" por cada pasada del

@@ -1,0 +1,73 @@
+package salidaDatos;
+
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.Scanner;
+
+
+import objetos.Anillos;
+import objetos.Armas;
+
+
+public class SalidaDatosObjetos {
+	
+	static Scanner letras = new Scanner(System.in);
+	/**
+	 * 
+	 * @param objetos array de objetos ya cargados 
+	 * 
+	 *  aqui buscamos los objetos para poder mostrarlos y hacemos un "for" para mostralos 
+	 */
+	public static void mostrarDatosObjetos(Objetos[] objetos) {
+		for (int i = 0; i < objetos.length; i++) {
+			if (objetos[i] != null) {
+				System.out.println("---------------"
+						+ "-----------------------------------------------------------------------------");
+				System.out.println("El nombre del objeto es " + objetos[i].getNombre());
+				System.out.println("El tipo de objeto es " + objetos[i].getTipo());
+				String repuesta = letras.nextLine() ;
+				if(repuesta.equalsIgnoreCase("Si")) {
+					System.out.println("El lore es: " + objetos[i].getLore());
+				}
+			
+			}
+		}
+
+	}
+	
+	/**
+	 * 
+	 * @param objetos arrayList de objetos ya cargados 
+	 * @param nombreObjeto string propocionado por el usuario
+	 * 
+	 *  aqui buscamos los objetos para poder mostrarlos y hacemos un "for" para mostralos  segun el nombre proporcionado por el usuario
+	 */
+	public static void mostrarArmadurasNombre(ArrayList<Anillos> anillos,String nombreObjeto) {
+		for(Anillos anilloClave :anillos ) {
+			if(anilloClave!= null && anilloClave.getNombre().equalsIgnoreCase(nombreObjeto)) {
+				System.out.println(anilloClave);
+			}
+		}
+
+	}
+	/**
+	 * 
+	 * @param objetos array de objetos ya cargados 
+	 * @param nombreTipo string propocionado por el usuario
+	 * 
+	 *  aqui buscamos los objetos para poder mostrarlos y hacemos un "for" para mostralos  segun el nombre proporcionado por el usuario
+	 */
+	public static void mostarArmasNombre(ArrayList<Armas> armas,String nombre) {
+		for(Armas armasClave :armas ) {
+			if(armasClave!= null && armasClave.getNombre().equalsIgnoreCase(nombre)) {
+				System.out.println(armasClave);
+			}
+		}
+		public static void mostarArmastipo(ArrayList<Armas> armas,String tipo) {
+			for(Armas armasClave :armas ) {
+				if(armasClave!= null && armasClave.getTipoArama().equalsIgnoreCase(tipo)) {
+					System.out.println(armasClave);
+				}
+			}
+
+}}

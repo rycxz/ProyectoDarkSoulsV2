@@ -7,6 +7,7 @@ public class Jefes {
 	 protected  String informacionBreve;
 	 protected int vida;
 	 protected int ataque;
+	 boolean esObligatorio;
 	
 	public Jefes() {
 	}
@@ -49,12 +50,13 @@ public class Jefes {
 	public void setAtaque(int ataque) {
 		this.ataque = ataque;
 	}
-	public Jefes(String nombre, String tipo, String informacionBreve, int vida, int ataque) {
+	public Jefes(String nombre, String tipo, String informacionBreve, int vida, int ataque,boolean esObligatorio) {
 		this.nombre = nombre;
 		this.tipo = tipo;
 		this.informacionBreve = informacionBreve;
 		this.vida = vida;
 		this.ataque = ataque;
+		this.esObligatorio=true;
 	}
 	@Override
 	public String toString() {
@@ -62,6 +64,7 @@ public class Jefes {
 				+" Tipo: " + " \n" + tipo +" \n "+ " Informacion breve :"+ " \n" + informacionBreve +" \n "+ " Vida "
 				+ vida +" \n "+ " Ataque " + ataque +" \n ";
 	}
+
 	
 	
 }

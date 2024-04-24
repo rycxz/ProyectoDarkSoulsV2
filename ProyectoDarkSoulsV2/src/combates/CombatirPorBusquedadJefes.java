@@ -25,7 +25,7 @@ public class CombatirPorBusquedadJefes {
 		System.out.println("1-Buscar por nombre");
 		System.out.println("2.Buscar por tipo");
 		int numOpcionesBusquedad = numeros.nextInt();
-		int contador;
+		int contador = 0;
 		switch(numOpcionesBusquedad) {
 		case 1:
 			System.out.println("Los nombres de los jefes son:");
@@ -35,7 +35,7 @@ public class CombatirPorBusquedadJefes {
 			}
 			String nombreJefeBuscar= letras.nextLine();
 			Jefes combatirJefeNombre=SalidaDatosJefes.combatirJefesNombre(todosJefes, nombreJefeBuscar);
-			CombatirContraUnJefe.combateContraJefeBuscado(combatirJefeNombre, personajePrincipal);
+			CombatirContraUnJefe.combateContraJefeBuscado(combatirJefeNombre, personajePrincipal, todosJefes, letras);
 			break;
 		case 2:
 			System.out.println("Los tipos de los jefes son:");
@@ -46,7 +46,7 @@ public class CombatirPorBusquedadJefes {
 			}
 			String tipoJefeBuscar= letras.nextLine();
 			Jefes combatirJefeTipo=SalidaDatosJefes.combatirJefesTipo(todosJefes, tipoJefeBuscar);
-			CombatirContraUnJefe.combateContraJefeBuscado(combatirJefeTipo, personajePrincipal);
+			CombatirContraUnJefe.combateContraJefeBuscado(combatirJefeTipo, personajePrincipal, todosJefes, letras);
 			break;
 			default:
 				System.out.println("Opcion no valida");

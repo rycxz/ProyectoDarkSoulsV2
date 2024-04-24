@@ -10,8 +10,9 @@ public class JefesPrincipales extends Jefes{
 	 * @param ataque
 	 */
 
-	public JefesPrincipales(String nombre, String tipo,String informacionBreve, int vida, int ataque) {
-		super(nombre, tipo,informacionBreve, vida, ataque);
+	public JefesPrincipales(String nombre, String tipo,String informacionBreve, int vida, int ataque,boolean esObligatorio) {
+		super(nombre, tipo,informacionBreve, vida, ataque, esObligatorio);
+		this.esObligatorio=true;
 		// TODO Auto-generated constructor stub
 	}
 
@@ -25,6 +26,7 @@ public class JefesPrincipales extends Jefes{
 				",la breve informacion que tenemos es " + informacionBreve
 				+ ", su vida es" + vida + "y su ataque es" + ataque + ".";
 	}
+	
 
 	
 	

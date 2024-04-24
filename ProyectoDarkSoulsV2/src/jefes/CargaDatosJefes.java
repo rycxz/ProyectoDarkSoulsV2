@@ -36,7 +36,7 @@ public class CargaDatosJefes {
 		ArrayList<JefesPrincipales> jefesTotalesPrimarios = new ArrayList<>();
 
 		for (int i = 0; i < numeroJefes; i++) {
-			JefesPrincipales jefes = new JefesPrincipales(nombre[i], tipo[i], informacionBreve[i], vida[i], ataque[i]);
+			JefesPrincipales jefes = new JefesPrincipales(nombre[i], tipo[i], informacionBreve[i], vida[i], ataque[i],true);
 			jefesTotalesPrimarios.add((JefesPrincipales) jefes);
 
 		}
@@ -67,7 +67,7 @@ public class CargaDatosJefes {
 		ArrayList<JefesSecundarios> jefesTotalesSecunadrios = new ArrayList<>();
 
 		for (int i = 0; i < numeroJefes; i++) {
-			JefesSecundarios jefes = new JefesSecundarios(nombre[i], tipo[i], informacionBreve[i], vida[i], ataque[i]);
+			JefesSecundarios jefes = new JefesSecundarios(nombre[i], tipo[i], informacionBreve[i], vida[i], ataque[i],false);
 			jefesTotalesSecunadrios.add(jefes);
 
 		}

@@ -17,10 +17,23 @@ public class ElecionObjetos {
 		System.out.println("Antes de cotinuar tienes que elegir tus obejtos para tu desafio ");
 		System.out.println(
 				"////////////////////////////////////////////////////////////////////////////////////////////////////////////////");
-		for (int i = 0; i < 3; i++) {
-			switch (i) {
+		System.out.println();
+		System.out.println();
+		System.out.println(
+				"Elige la opcion que quieres para la eleccion de tus objetos, ten en cuenta que si no eliges ninguno sera mas"
+						+ " dificil!");
+		int numMenu;
+		do {
+			System.out.println("1-Eliges tu anillo");
+			System.out.println("2-Eliges tus armas");
+			System.out.println("3-Eliges tu armadura");
+			System.out.println("4-Salir");
+			numMenu = numeros.nextInt();
+
+			switch (numMenu) {
 			case 1:
-				System.out.println("Quieres agregar un anillo?(Si/no)");
+				System.out.println("Quieres crear tu un anillo?(Si/no)");
+				System.out.println();
 				String elecionCrearAnillo = letras.nextLine();
 				elecionCrearAnillo = Comprobaciones.comprobacionNombre(elecionCrearAnillo);
 				if (elecionCrearAnillo.equalsIgnoreCase("si")) {
@@ -50,6 +63,7 @@ public class ElecionObjetos {
 					for (Anillos anillosPersonaje : anillos) {
 						System.out.println("Dime el anillo que queres");
 						System.out.println(opcionAnillos + " - " + anillosPersonaje.toString());
+						opcionAnillos++;
 
 					}
 					opcionAnillos = numeros.nextInt();
@@ -60,7 +74,7 @@ public class ElecionObjetos {
 				}
 				break;
 			case 2:
-				System.out.println("Ahora tienes que elegir tu arma o crearte tu la tuya.");
+				System.out.println("Ahora tienes que elegir tu arma ");
 				System.out.println("Quieres crear tu espada (si/no)");
 				String elecionCrearEspada = letras.nextLine();
 				elecionCrearEspada = Comprobaciones.comprobacionNombre(elecionCrearEspada);
@@ -91,38 +105,41 @@ public class ElecionObjetos {
 					} else if (eleccionTipoArmas.equalsIgnoreCase("secundarios")) {
 						armasSecundarias.add(new Armas(nombre, lore, tipoArama, danio, tipoDanio, peso));
 					}
-				} 
-				{
-				System.out.println("Quieres armas de jefes primarios (si/no)");
-				String eleccionTipoArmas = letras.nextLine();
-				eleccionTipoArmas = Comprobaciones.comprobacionNombre(eleccionTipoArmas);
-				if (eleccionTipoArmas.equalsIgnoreCase("si")) {
-					System.out.println("Primero tienes que elgir tu arma");
-					int opcionArma = 0;
-					for (Armas armasPersonaje : armasPrimarias) {
-						System.out.println("Dime el arma que queres");
-						System.out.println(opcionArma + " - " + armasPersonaje.toString());
-
-					}
-					opcionArma = numeros.nextInt();
-
-					personajePrincipal.pesoCargado(armasPrimarias.get(opcionArma).getPeso());
-					personajePrincipal.ataqueAlterado(armasPrimarias.get(opcionArma).getDanio());
 				} else {
-					System.out.println("Primero tienes que elgir tu arma ");
-					int opcionArma = 0;
-					for (Armas armasPersonaje : armasSecundarias) {
-						System.out.println("Dime el arma que queres");
-						System.out.println(opcionArma + " - " + armasPersonaje.toString());
+					System.out.println("Quieres armas de jefes primarios (si/no)");
+					String eleccionTipoArmas = letras.nextLine();
+					eleccionTipoArmas = Comprobaciones.comprobacionNombre(eleccionTipoArmas);
+					if (eleccionTipoArmas.equalsIgnoreCase("si")) {
+						System.out.println("Primero tienes que elgir tu arma");
+						int opcionArma = 0;
+						int contadorArmas = 0;
+						for (Armas armasPersonaje : armasPrimarias) {
+							System.out.println("Dime el arma que queres");
+							System.out.println(contadorArmas + " - " + armasPersonaje.toString());
+							contadorArmas++;
 
+						}
+						opcionArma = numeros.nextInt();
+
+						personajePrincipal.pesoCargado(armasPrimarias.get(opcionArma).getPeso());
+						personajePrincipal.ataqueAlterado(armasPrimarias.get(opcionArma).getDanio());
+					} else {
+						System.out.println("Primero tienes que elgir tu arma ");
+						int opcionArma = 0;
+						int contadorArmas = 0;
+						for (Armas armasPersonaje : armasSecundarias) {
+							System.out.println("Dime el arma que queres");
+							System.out.println(contadorArmas + " - " + armasPersonaje.toString());
+							contadorArmas++;
+
+						}
+						opcionArma = numeros.nextInt();
+
+						personajePrincipal.pesoCargado(armasSecundarias.get(opcionArma).getPeso());
+						personajePrincipal.ataqueAlterado(armasSecundarias.get(opcionArma).getDanio());
 					}
-					opcionArma = numeros.nextInt();
 
-					personajePrincipal.pesoCargado(armasSecundarias.get(opcionArma).getPeso());
-					personajePrincipal.ataqueAlterado(armasSecundarias.get(opcionArma).getDanio());
 				}
-
-			}
 
 				break;
 			case 3:
@@ -144,15 +161,16 @@ public class ElecionObjetos {
 					int danioMitigado = numeros.nextInt();
 					System.out.println("y cuanto va a pesar");
 					double pesoArmadura = numeros.nextDouble();
-					System.out.println( "Quieres añadrira a la lista de armaduras de jefes primarios o secundarios? (primarios/secundarios)");
+					System.out.println(
+							"Quieres añadrira a la lista de armaduras de jefes primarios o secundarios? (primarios/secundarios)");
 					String eleccionTipoArmaduras = letras.nextLine();
 					eleccionTipoArmaduras = Comprobaciones.comprobacionNombre(eleccionTipoArmaduras);
 					if (eleccionTipoArmaduras.equalsIgnoreCase("primarios")) {
-						armaduraPrimarias.add(new Armaduras(nombre,lore,danioMitigado,pesoArmadura));
+						armaduraPrimarias.add(new Armaduras(nombre, lore, danioMitigado, pesoArmadura));
 					} else if (eleccionTipoArmaduras.equalsIgnoreCase("secundarios")) {
-						armaduraSecundarias.add(new Armaduras(nombre,lore,danioMitigado,pesoArmadura));
+						armaduraSecundarias.add(new Armaduras(nombre, lore, danioMitigado, pesoArmadura));
 					}
-					
+
 				} else {
 					System.out.println("Quieres armaduras de jefes primarios (si/no)");
 					String eleccionTipoArmaduras = letras.nextLine();
@@ -160,9 +178,11 @@ public class ElecionObjetos {
 					if (eleccionTipoArmaduras.equalsIgnoreCase("si")) {
 						System.out.println("Primero tienes que elgir tu armadura");
 						int opcionArmadura = 0;
+						int contadorArmadura = 0;
 						for (Armaduras armaduraPersonaje : armaduraPrimarias) {
 							System.out.println("Dime el arma que queres");
-							System.out.println(opcionArmadura + " - " + armaduraPersonaje.toString());
+							System.out.println(contadorArmadura + " - " + armaduraPersonaje.toString());
+							contadorArmadura++;
 
 						}
 						opcionArmadura = numeros.nextInt();
@@ -170,12 +190,14 @@ public class ElecionObjetos {
 						personajePrincipal.pesoCargado(armaduraPrimarias.get(opcionArmadura).getPeso());
 						personajePrincipal.vidaAlterada(armaduraPrimarias.get(opcionArmadura).getProteccion());
 					} else {
-						
+
 						System.out.println("Primero tienes que elgir tu armadura");
 						int opcionArmadura = 0;
+						int contadorArmadura = 0;
 						for (Armaduras armaduraPersonaje : armaduraSecundarias) {
 							System.out.println("Dime el arma que queres");
-							System.out.println(opcionArmadura + " - " + armaduraPersonaje.toString());
+							System.out.println(contadorArmadura + " - " + armaduraPersonaje.toString());
+							contadorArmadura++;
 
 						}
 						opcionArmadura = numeros.nextInt();
@@ -186,9 +208,14 @@ public class ElecionObjetos {
 
 				}
 				break;
+			case 4:
+				System.out.println("Has Salido");
+				break;
+			default:
+				System.out.println("Opcion no valida");
 
 			}
-		}
-	}
 
+		} while (numMenu != 4);
+	}
 }

@@ -1,5 +1,8 @@
 package otros;
 
+import java.util.ArrayList;
+
+import jefes.Jefes;
 
 public class GeneracionNumeroAleatorio {
 	/**
@@ -15,8 +18,8 @@ public class GeneracionNumeroAleatorio {
 	 * 
 	 * generador de numeros aleatorios donde sacamos una posicion aleatoria de un boss 
 	 */
-	public static double generacionNumeroPosicionBoss() {
-		double aleatorio=Math.random()*24;
+	public static double generacionNumeroPosicionBoss(ArrayList <Jefes> todoJefes) {
+		double aleatorio=Math.random()*todoJefes.size();
 	     return aleatorio;
 	}
 

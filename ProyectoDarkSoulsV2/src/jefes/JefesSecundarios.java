@@ -9,10 +9,12 @@ public class JefesSecundarios extends Jefes{
 	 * @param vida
 	 * @param ataque
 	 */
+	
 
-	public JefesSecundarios(String nombre, String tipo,String informacionBreve	, int vida, int ataque) {
-		super(nombre, tipo,informacionBreve, vida, ataque);
+	public JefesSecundarios(String nombre, String tipo,String informacionBreve	, int vida, int ataque,boolean esObligatorio) {
+		super(nombre, tipo,informacionBreve, vida, ataque, esObligatorio);
 		// TODO Auto-generated constructor stub
+		this.esObligatorio=false;
 	}
 
 	/* 

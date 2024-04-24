@@ -1,0 +1,53 @@
+package salidaDatos;
+
+import java.util.ArrayList;
+
+import objetos.Anillos;
+import objetos.Armas;
+
+public class SalidaDatosObjetos {
+
+	/**
+	 * 
+	 * @param objetos      arrayList de objetos ya cargados
+	 * @param nombreObjeto string propocionado por el usuario
+	 * 
+	 *                     aqui buscamos los objetos para poder mostrarlos y hacemos
+	 *                     un "for" para mostralos segun el nombre proporcionado por
+	 *                     el usuario
+	 */
+	public static void mostrarArmadurasNombre(ArrayList<Anillos> anillos, String nombreObjeto) {
+		for (Anillos anilloClave : anillos) {
+			if (anilloClave != null && anilloClave.getNombre().equalsIgnoreCase(nombreObjeto)) {
+				System.out.println(anilloClave);
+			}
+		}
+
+	}
+
+	/**
+	 * 
+	 * @param objetos    array de objetos ya cargados
+	 * @param nombreTipo string propocionado por el usuario
+	 * 
+	 *                   aqui buscamos los objetos para poder mostrarlos y hacemos
+	 *                   un "for" para mostralos segun el nombre proporcionado por
+	 *                   el usuario
+	 */
+	public static void mostarArmasNombre(ArrayList<Armas> armas, String nombre) {
+		for (Armas armasClave : armas) {
+			if (armasClave != null && armasClave.getNombre().equalsIgnoreCase(nombre)) {
+				System.out.println(armasClave);
+			}
+		}
+	}
+
+	public static void mostarArmastipo(ArrayList<Armas> armas, String tipo) {
+		for (Armas armasClave : armas) {
+			if (armasClave != null && armasClave.getTipoArama().equalsIgnoreCase(tipo)) {
+				System.out.println(armasClave);
+			}
+		}
+
+	}
+}

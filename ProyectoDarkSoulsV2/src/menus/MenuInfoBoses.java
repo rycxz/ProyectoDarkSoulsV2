@@ -1,6 +1,11 @@
 package menus;
 
+import java.util.ArrayList;
 import java.util.Scanner;
+
+import jefes.Jefes;
+import otros.OrdenarJefes;
+import salidaDatos.SalidaDatosJefes;
 
 
 /**
@@ -13,14 +18,12 @@ import java.util.Scanner;
  *
  */
 public class MenuInfoBoses {
-	static Scanner numerosMenu = new Scanner(System.in);
-	static Scanner buscarPalabras = new Scanner(System.in);
 	
 	/**
 	 *  menu donde hace la llamda a los disitintos metodos segun lo que elioga el usuario hara una cosa u otra
 	 * @param todosJefes array de objeto de los jefes ya creados y cargados
 	 */
-	public static void menuBoses(Jefes[] todosJefes) {
+	public static void menuBoses(ArrayList <Jefes> todosJefes,Scanner numerosMenu,Scanner letras) {
 		System.out.println();
 		System.out.println("--------------------------------------"
 				+ "-----------------------------------------------------------");
@@ -29,7 +32,7 @@ public class MenuInfoBoses {
 			System.out.println("Que quieres hacer?");
 			System.out.println("1-Infromación de todos los jefes");
 			System.out.println("2-Buscar por nombre");
-			System.out.println("3-Buscar por tipo");
+			System.out.println("3-Buscar por tipo ");
 			System.out.println("4-Mostar Jefes Ordenados");
 			System.out.println("5-Salir");
 			numJefes= numerosMenu.nextInt();
@@ -37,30 +40,30 @@ public class MenuInfoBoses {
 			case 1:
 				System.out.println("-----------------------------------------"
 						+ "----------------------------------------------------------------------");
-				SalidaDatosJefes.mostrarDatosJefes(todosJefes);
+				SalidaDatosJefes.mostrarDatosJefes(todosJefes, letras);
 				break;
 			case 2:
 				System.out.println("------------------------------------"
 						+ "----------------------------------------------------------------------");
 				System.out.println("Jefes: ");
-				for(int i = 0;i<todosJefes.length;i++) {
-					System.out.println("(" + i + ") "+ todosJefes[i].getNombre() );
+				for(int i = 0;i<todosJefes.size();i++) {
+					System.out.println("(" + i + ") "+ todosJefes.get(i).getNombre() );
 				}
 				System.out.println("Introdce el nombre del jefe que quiere buscar: (el nombre tiene que estar completo!)");
-				String nombreJefeBuscar = buscarPalabras.nextLine();
+				String nombreJefeBuscar = letras.nextLine();
 				SalidaDatosJefes.buscarJefesNombre(todosJefes, nombreJefeBuscar);
 				break;
 			case 3:
 				System.out.println("------------------------------------------"
 						+ "----------------------------------------------------------------------------------");
 				System.out.println("Introdce el tipo del jefe que quiere buscar: ");
-				for(int i = 0;i<todosJefes.length;i++) {
-					System.out.println("(" + i + ") "+ todosJefes[i].getTipo());
+				for(int i = 0;i<todosJefes.size();i++) {
+					System.out.println("(" + i + ") "+ todosJefes.get(i).getTipo());
 				}
-				String tipoJefeBuscar = buscarPalabras.nextLine();
+				String tipoJefeBuscar = letras.nextLine();
 				SalidaDatosJefes.buscarJefesTipo(todosJefes, tipoJefeBuscar);
 			case 4:
-				ordenarJefes(todosJefes);
+				ordenarJefes(todosJefes, letras);
 				break;
 			case 5:
 				System.out.println("Ha salido!");
@@ -74,9 +77,9 @@ public class MenuInfoBoses {
 	}
 	/**
 	 * metdodo que ordena los jefes segun el atributo que selecione el usuario
-	 * @param todosJefes array de objeto de los jefes ya creados y cargados
+	 * @param todosJefes,Scanner numerosMenu  array de objeto de los jefes ya creados y cargados
 	 */
-	public static  void ordenarJefes(Jefes[] todosJefes) {
+	public static  void ordenarJefes(ArrayList<Jefes> todosJefes,Scanner numerosMenu ) {
 		System.out.println("Por que opcion los quiere ordenar");
 		int numEleccion ;
 		do {
@@ -86,10 +89,10 @@ public class MenuInfoBoses {
 			numEleccion = numerosMenu.nextInt();
 			switch(numEleccion) {
 			case 1:
-				OrdenarJefes.mostrarJefesPorAtaque(todosJefes);
+				OrdenarJefes.mostrarJefesPorAtaque(todosJefes  );
 				break;
 			case 2:
-				OrdenarJefes.mostrarJefesPorVida(todosJefes);
+				OrdenarJefes.mostrarJefesPorVida(todosJefes  );
 				break;
 			case 3:
 				System.out.println("Ha salido");

@@ -14,19 +14,13 @@ anilos 100%
 - menu de elecion incial de obejtos 100%
 
 
-
-
-SalidaDatosJefes.combatirJefesNombre falta por hacer
-combatirJefesBusquedad arregalar 
-
 --------------------por hacer
 
-adaptar main 80%
+adaptar main 100%
 buscar eliminar jefes y objetos por cada tipo 
-adaptar combates 90 %
-try&catch
-sobreescribir un metodo 
-acabar documentacion 80%
+adaptar combates 100 %
+try&catch !!!!!!!!!!!!!!!!!!!!!!!!!!!!!11
+acabar documentacion 100%
 
 
 

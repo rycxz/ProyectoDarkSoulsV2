@@ -1,11 +1,12 @@
-package acciones;
+package combates;
 
+import java.util.ArrayList;
 import java.util.Scanner;
 
-import clases.Jefes;
-import clases.Personaje;
+import jefes.Jefes;
 import otros.ComprobacionMuerte;
 import otros.GeneracionNumeroAleatorio;
+import personaje.Personaje;
 
 public class CombatirContraUnJefe {
 	/** * 
@@ -15,8 +16,8 @@ public class CombatirContraUnJefe {
 	 * @param personajePrincipal objeto de personaje principal ya creado y cargado
 	
 	 */
-	public static void combateContraJefeBuscado(Jefes jefeBuscado,Personaje personajePrincipal) {
-		Scanner saltoLinea = new Scanner(System.in);
+	public static void combateContraJefeBuscado(Jefes jefes,Personaje personajePrincipal,ArrayList<Jefes> todosJefes,Scanner saltoLinea) {
+		
 		int vidaPersonaje = personajePrincipal.getVida();
 
 		System.out.println("Suena musica epica de Dark Souls");
@@ -24,12 +25,12 @@ public class CombatirContraUnJefe {
 		vidaPersonaje = personajePrincipal.getVida();
 
 
-			int vidaBoss = jefeBuscado.getVida();
+			int vidaBoss = jefes.getVida();
 
 			// asignamos valor de cada jefe a la vida, este valor ira cambiando por cada
 			// vuelta del "for"
 
-			System.out.println("Estamos ante " + jefeBuscado.getNombre());
+			System.out.println("Estamos ante " + jefes.getNombre());
 
 			System.out.println("");
 
@@ -40,9 +41,9 @@ public class CombatirContraUnJefe {
 			saltoLinea.nextLine();
 			// usando la porbabilidad hacemos que decida quien ataca primero
 			if (numeroInicioPelea < 50) {
-				System.out.println(jefeBuscado.getNombre() + " lanza el primer golpe");
+				System.out.println(jefes.getNombre() + " lanza el primer golpe");
 				System.out.println(" ");
-				vidaPersonaje = vidaPersonaje - jefeBuscado.getAtaque();
+				vidaPersonaje = vidaPersonaje - jefes.getAtaque();
 				System.out.println("Te ha dado, tienes " + vidaPersonaje);
 				saltoLinea.nextLine();
 				aciertoBoss = GeneracionNumeroAleatorio.generacionNumeroAciertoBoss();
@@ -55,7 +56,7 @@ public class CombatirContraUnJefe {
 
 			} else {
 				System.out.println("");
-				System.out.println("Atacas primero a " + jefeBuscado.getNombre());
+				System.out.println("Atacas primero a " + jefes.getNombre());
 				vidaBoss = vidaBoss - personajePrincipal.getAtaque();
 				System.out.println("Le has dado, le queda " + vidaBoss);
 				saltoLinea.nextLine();
@@ -64,8 +65,8 @@ public class CombatirContraUnJefe {
 			
 				aciertoBoss = GeneracionNumeroAleatorio.generacionNumeroAciertoBoss();
 				if (aciertoBoss < 50) {
-					System.out.println(jefeBuscado.getNombre() + " te ataca");
-					vidaPersonaje = vidaPersonaje - jefeBuscado.getAtaque();
+					System.out.println(jefes.getNombre() + " te ataca");
+					vidaPersonaje = vidaPersonaje - jefes.getAtaque();
 					System.out.println("Te ha dado, tienes " + vidaPersonaje);
 					saltoLinea.nextLine();
 					if (vidaPersonaje < 0) {

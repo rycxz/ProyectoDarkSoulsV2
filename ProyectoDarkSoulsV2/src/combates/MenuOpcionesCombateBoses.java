@@ -27,8 +27,7 @@ public class MenuOpcionesCombateBoses {
 		int numOpcionesCombate = 0;
 		do {
 			System.out.println("Opciones a elegir");
-			System.out.println("1-Combate con todos los jefes principales");
-			System.out.println("2-Combate contra los jefes secundarios");
+			System.out.println("1-Combate con todos los jefes ");
 
 			System.out.println("2-Combate con el jefe que tu has creado ");
 			System.out.println("3-Combate con el jefe que quieras");
@@ -67,19 +66,20 @@ public class MenuOpcionesCombateBoses {
 				} while (numOpcionesDificultad != 4);
 
 				break;
+				
 			case 2:
 				Jefes jefePersonalizado = CreacionJefePersonalizado.menuCombateJefePersonalizado(personajePrincipal,
-						numeros, numeros, todosJefes, jefesSecundarios);
+						numeros, numeros, todosJefesPrincipales, jefesSecundarios,todosJefes);
 				CombatirJefeCreado.combateContraJefePersonalizado(jefePersonalizado, personajePrincipal, numeros);
 				break;
 				
 			case 3:
-				CombatirPorBusquedadJefes.combatirJefesBusquedad(todosJefes, personajePrincipal);
+				CombatirPorBusquedadJefes.combatirJefesBusquedad(todosJefes, personajePrincipal, letras, numeros);
 				break;
 			case 4:
-				double numeroPosicionBossRandom = GeneracionNumeroAleatorio.generacionNumeroPosicionBoss();
-				CombatirContraUnJefe.combateContraJefeBuscado(todosJefes[(int) numeroPosicionBossRandom],
-						personajePrincipal);
+				double numeroPosicionBossRandom = GeneracionNumeroAleatorio.generacionNumeroPosicionBoss(todosJefes);
+				CombatirContraUnJefe.combateContraJefeBuscado(todosJefes.get((int) numeroPosicionBossRandom),
+						personajePrincipal,todosJefes, letras);
 				break;
 			case 5:
 				System.out.println("Ha salido!");

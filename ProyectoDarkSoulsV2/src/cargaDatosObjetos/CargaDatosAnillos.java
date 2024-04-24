@@ -24,7 +24,7 @@ public class CargaDatosAnillos {
 		double[] peso = { 0.2 ,0.4 ,0.9, 0.1, 0.5 , 0.7, 0.44 , 0.7,0.4,0.56,0.32,0.12,0.34};
 
 		ArrayList<Anillos> anillos = new ArrayList<>();
-		for (int i = 0; i < nombreAnillosDanVida.length; i++) {
+		for (int i = 0; i < nombreAnillosDanVida.length-1; i++) {
 			anillos.add(new Anillos(nombreAnillosDanVida[i],lore[i],cantidadVidaAlteradaAnillos[i],cantidadDanioAlteradoAnillos[i],peso[i]));
 		}
 		return anillos;

@@ -12,13 +12,14 @@ public class CreacionJefePersonalizado {
 	 *   metodo que crea un jefe personalizado fuera del array de objetos de jefes
 	 * 
 	 * @param personajePrincipal objeto de personaje principal ya creado y cargado
+	 * @param todosJefes 
 	 * @return  jefePersonalizado devuelve el objeto del jefe creado por el usuario
 	 * 
 
 	 */
 
 	public static Jefes menuCombateJefePersonalizado(Personaje personajePrincipal,Scanner numeros,Scanner letras,
-			ArrayList <JefesPrincipales> jefesPrincipales , ArrayList <JefesSecundarios> jefesSeccundarios ) {
+			ArrayList <JefesPrincipales> jefesPrincipales , ArrayList <JefesSecundarios> jefesSeccundarios, ArrayList<Jefes> todosJefes ) {
 		System.out.println("Lo primero vamos a crear tu jefe! ");
 		System.out.println("-----------------------------------------------------------------------");
 		System.out.println("Lo primero que vamos a necesitar es un nombre: ");
@@ -69,12 +70,12 @@ public class CreacionJefePersonalizado {
 		String repuestaEleccionJefe = letras.nextLine();
 		repuestaEleccionJefe= Comprobaciones.comprobacionNombre(repuestaEleccionJefe);
 		if(repuestaEleccionJefe.equalsIgnoreCase("si")) {
-			JefesPrincipales jefePersonalizado = new JefesPrincipales(nombreJefeCreado,tipo,informacionBreve,vida,ataque);
+			JefesPrincipales jefePersonalizado = new JefesPrincipales(nombreJefeCreado,tipo,informacionBreve,vida,ataque, true);
 			jefesPrincipales.add(jefePersonalizado);
 			return jefePersonalizado;
 		}
 		else {
-			JefesSecundarios jefePersonalizado = new JefesSecundarios(nombreJefeCreado,tipo,informacionBreve,vida,ataque);
+			JefesSecundarios jefePersonalizado = new JefesSecundarios(nombreJefeCreado,tipo,informacionBreve,vida,ataque,false);
 			jefesSeccundarios.add(jefePersonalizado);
 			return jefePersonalizado;
 		}
