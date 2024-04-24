@@ -1,0 +1,35 @@
+package combates;
+
+import java.util.ArrayList;
+import java.util.Scanner;
+
+import jefes.JefesPrincipales;
+import jefes.JefesSecundarios;
+import personaje.Personaje;
+
+public class MensajeComabtes {
+	/**
+	 * * hacemos un metodo para tener organizado el sistema de combate, este metodo
+	 * solo nos muestra los atributos de nuestra clase y llama a otro donde esta el
+	 * menu
+	 * 
+	 * @param todosJefes         array de objeto de los jefes ya creados y cargados
+	 * @param personajePrincipal objeto de personaje principal ya creado y cargado
+	 * @param letras 
+	 * @param numeros 
+	 * 
+	 * 
+	 */
+	public static void combatesContraJefesPrincipales(ArrayList <JefesPrincipales> todosJefesPrincipales,
+			ArrayList<JefesSecundarios> todosJefesSecundarios, Personaje personajePrincipal, Scanner numeros, Scanner letras) {
+		System.out.println("Bienvenido a los combates " + personajePrincipal.getNombre());
+		System.out.println("---------------------------------------------------------------------------");
+		System.out.println("Antes de comenzar te recuerdo, tu clase es " + personajePrincipal.getClase()
+				+ " ,tienes un daño de  " + personajePrincipal.getAtaque() + " y tienes " + personajePrincipal.getVida()
+				+ " puntos de vida.");
+		System.out.println();
+		MenuOpcionesCombateBoses.menuEleccioCombates(todosJefesPrincipales, todosJefesSecundarios, personajePrincipal,numeros,letras);
+
+	}
+
+}

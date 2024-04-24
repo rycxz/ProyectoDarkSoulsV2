@@ -4,3 +4,6 @@
 1713868662232	Rename local variable 'nombreAraduras'
 1713913519713	Delete element
 1713914178213	Delete element
+1713957406425	Rename method 'combateBosesOpciones'
+1713958783563	Rename type 'CombateContraJefePersonalizado'
+1713958803907	Rename type 'Combates'

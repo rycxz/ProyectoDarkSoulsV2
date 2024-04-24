@@ -2,17 +2,25 @@
 <qualifiedTypeNameHistroy>
 <fullyQualifiedTypeName name="clases.Personaje"/>
 <fullyQualifiedTypeName name="personaje.MenuCrearPersonaje"/>
-<fullyQualifiedTypeName name="personaje.Personaje"/>
-<fullyQualifiedTypeName name="java.util.ArrayList"/>
 <fullyQualifiedTypeName name="jefes.CargaDatosJefes"/>
 <fullyQualifiedTypeName name="cargaDatosObjetos.CargaDatosAnillos"/>
 <fullyQualifiedTypeName name="objetos.Anillos"/>
 <fullyQualifiedTypeName name="cargaDatosObjetos.CargaDatosArmaduras"/>
 <fullyQualifiedTypeName name="objetos.Armaduras"/>
-<fullyQualifiedTypeName name="jefes.JefesSecundarios"/>
-<fullyQualifiedTypeName name="jefes.JefesPrincipales"/>
-<fullyQualifiedTypeName name="jefes.Jefes"/>
 <fullyQualifiedTypeName name="cargaDatosObjetos.CargaDatosArmas"/>
 <fullyQualifiedTypeName name="objetos.Armas"/>
 <fullyQualifiedTypeName name="comprobacionEntrada.Comprobaciones"/>
+<fullyQualifiedTypeName name="combates.Combates"/>
+<fullyQualifiedTypeName name="jefes.JefesPrincipales"/>
+<fullyQualifiedTypeName name="jefes.JefesSecundarios"/>
+<fullyQualifiedTypeName name="jefes.CreacionJefePersonalizado"/>
+<fullyQualifiedTypeName name="otros.ComprobacionMuerte"/>
+<fullyQualifiedTypeName name="otros.GeneracionNumeroAleatorio"/>
+<fullyQualifiedTypeName name="java.util.ArrayList"/>
+<fullyQualifiedTypeName name="personaje.Personaje"/>
+<fullyQualifiedTypeName name="salidaDatos.SalidaDatosJefes"/>
+<fullyQualifiedTypeName name="menuJefes.MenuInfoBoses"/>
+<fullyQualifiedTypeName name="personaje.MenuPersonaje"/>
+<fullyQualifiedTypeName name="menuObjetos.MenuIfnoObjetos"/>
+<fullyQualifiedTypeName name="jefes.Jefes"/>
 </qualifiedTypeNameHistroy>

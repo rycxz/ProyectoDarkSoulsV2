@@ -17,14 +17,19 @@ import java.util.Scanner;
 import cargaDatosObjetos.CargaDatosAnillos;
 import cargaDatosObjetos.CargaDatosArmaduras;
 import cargaDatosObjetos.CargaDatosArmas;
+import combates.MensajeComabtes;
 import jefes.CargaDatosJefes;
+import jefes.Jefes;
 import jefes.JefesPrincipales;
 import jefes.JefesSecundarios;
+import menuJefes.MenuInfoBoses;
+import menuObjetos.MenuIfnoObjetos;
 import menus.ElecionObjetos;
 import objetos.Anillos;
 import objetos.Armaduras;
 import objetos.Armas;
 import personaje.MenuCrearPersonaje;
+import personaje.MenuPersonaje;
 import personaje.Personaje;
 
 
@@ -44,6 +49,9 @@ public class Principal {
 		//damos de alta a todos los jefes
 		ArrayList<JefesPrincipales> todosJefesPrincipales = CargaDatosJefes.cargarContenidoJefesPrincipales();
 		ArrayList<JefesSecundarios> todosJefesSecundarios = CargaDatosJefes.cargarContenidoJefesSecundarios();
+		ArrayList<Jefes> todosJefes = new ArrayList<>();
+		todosJefes.addAll(todosJefesPrincipales);
+		todosJefes.addAll(todosJefesSecundarios);
 		System.out.println();
 		//damos de alta todos los objetos
 		ArrayList<Anillos> anillos = CargaDatosAnillos.caraDatos();
@@ -59,25 +67,21 @@ public class Principal {
 		do {
 		System.out.println("Opciones a elegir:");
 		System.out.println("1-Combate contra jefes");
-		System.out.println("2-Infromación zonas");
-		System.out.println("3-Infromación jefes");
+		System.out.println("2-Infromación jefes");
 		System.out.println("4-Infromación objetos");
 		System.out.println("5-Menu Personaje");
 		System.out.println("6-Salir");
 		numMenu= numerosMenuPrincipal.nextInt();
 		switch(numMenu) {
 		case 1:
-			Combates.combatesContraJefes(todosJefes,personajePrincipal);
+			MensajeComabtes.combatesContraJefesPrincipales(todosJefesPrincipales,todosJefesSecundarios, personajePrincipal,numerosMenuPrincipal,letrasMenuPrincipal);
 			break;
 		case 2:
-			MenuInfoZonas.infoZonas(todasZonas);
-			break;
-		case 3:
 			MenuInfoBoses.menuBoses(todosJefes);
 			
 			break;
 		case 4:
-			MenuIfnoObjetos.infoObjetos(todosObjetos);
+			MenuIfnoObjetos.infoObjetos(anillos,armaduraPrimarias,armaduraSecundarias,armasPrimarias,armasSecundarias);
 			break;
 		case 5:
 			

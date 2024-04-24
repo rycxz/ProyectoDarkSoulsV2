@@ -1,5 +1,6 @@
 package salidaDatos;
 
+import java.util.ArrayList;
 import java.util.Scanner;
 
 import jefes.Jefes;
@@ -105,7 +106,7 @@ public class SalidaDatosJefes {
 	 * metodo que devuelve un objeto para asi poder luchar contra el , el cula lo hemos buscado por el nombre
 	 * 
 	 */
-	public static Jefes combatirJefesNombre(Jefes[] todosJefes,String nombreJefeBuscar) {
+	public static Jefes combatirJefesNombre(ArrayList<Jefes> todosJefes,String nombreJefeBuscar) {
 		for (int i = 0; i < todosJefes.length; i++) {
 			if(todosJefes[i] != null) {
 				if(todosJefes[i].getNombre().equalsIgnoreCase(nombreJefeBuscar)) {
