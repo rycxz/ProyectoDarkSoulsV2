@@ -7,6 +7,11 @@ import jefes.JefesSecundarios;
 import objetos.Armas;
 
 public class CargaDatosArmas {
+	/**
+	 * el array list que recibe y los datos que le son introduciods estan en orden asi no se descuadra y cada arma va  con loo que tien que ir
+	 * @param jefes array list de jefe cargado para poder decir a que jefe pertenecia
+	 * @return
+	 */
 	public  static ArrayList<Armas> caraDatosJefesPrinciaples(ArrayList<JefesPrincipales> jefes) {
 		String[] nombre = { "Lanza Dragón", "Gran Mazo de Smough", "Gran Espada del Señor de la Ceniza",
 				"Gran Espada de Artorias", "Espada Oscura del Rey" };
@@ -28,7 +33,11 @@ public class CargaDatosArmas {
 		return armas;
 
 	}
-
+	/**
+	 * el array list que recibe y los datos que le son introduciods estan en orden asi no se descuadra y cada arma va  con loo que tien que ir
+	 * @param jefes array list de jefe cargado para poder decir a que jefe pertenecia
+	 * @return
+	 */
 	public static ArrayList<Armas> caraDatosJefesSecundarios(ArrayList<JefesSecundarios> jefes) {
 		String[] nombre = { "Gran Mazo de Havel", "Espada recta de los Guardianes", "Gran hacha de Gólem",
 				"Gran hacha de Capra", "Arco lunar" };

@@ -11,6 +11,18 @@ import personaje.Personaje;
 
 public class ElecionObjetos {
 
+	
+	/**
+	 *  metdoo que recir todos los atributos creadso en el amin para asi poder asignarlos a lo que eliga al usuario mediante un  menu
+	 * @param personajePrincipal
+	 * @param anillos
+	 * @param armaduraPrimarias
+	 * @param armaduraSecundarias
+	 * @param armasPrimarias
+	 * @param armasSecundarias
+	 * @param numeros
+	 * @param letras
+	 */
 	public static void elecionItemPesrosnaje(Personaje personajePrincipal, ArrayList<Anillos> anillos,
 			ArrayList<Armaduras> armaduraPrimarias, ArrayList<Armaduras> armaduraSecundarias,
 			ArrayList<Armas> armasPrimarias, ArrayList<Armas> armasSecundarias, Scanner numeros, Scanner letras) {
@@ -24,10 +36,12 @@ public class ElecionObjetos {
 						+ " dificil!");
 		int numMenu;
 		do {
+			System.out.println("--------------------------------------------------------------------------------------");
 			System.out.println("1-Eliges tu anillo");
 			System.out.println("2-Eliges tus armas");
 			System.out.println("3-Eliges tu armadura");
 			System.out.println("4-Salir");
+			System.out.println("--------------------------------------------------------------------------------------");
 			numMenu = numeros.nextInt();
 
 			switch (numMenu) {
@@ -37,15 +51,20 @@ public class ElecionObjetos {
 				String elecionCrearAnillo = letras.nextLine();
 				elecionCrearAnillo = Comprobaciones.comprobacionNombre(elecionCrearAnillo);
 				if (elecionCrearAnillo.equalsIgnoreCase("si")) {
+					System.out.println("--------------------------------------------------------------------------------------");
 					System.out.println("Dame el nombre para tu anillo");
 					String nombreAnillo = letras.nextLine();
 					nombreAnillo = Comprobaciones.comprobacionNombre(nombreAnillo);
+					System.out.println("--------------------------------------------------------------------------------------");
 					System.out.println("Añadele una historia");
 					String loreAnillo = letras.nextLine();
+					System.out.println("--------------------------------------------------------------------------------------");
 					System.out.println("Cuanta cantiadad de vida quiere que te sume o reste?");
 					int cantidadVidaAlteradaAnillo = numeros.nextInt();
+					System.out.println("--------------------------------------------------------------------------------------");
 					System.out.println("Cunatos puntos de ataque quieres que te sume o reste?");
 					int cantidadDanioAlteradoAnillo = numeros.nextInt();
+					System.out.println("--------------------------------------------------------------------------------------");
 					System.out.println("y que peso quieres que tenga tu anillo?");
 					double pesoAnillo = numeros.nextDouble();
 					System.out.println(
@@ -58,8 +77,10 @@ public class ElecionObjetos {
 					personajePrincipal.vidaAlterada(anilloCreado.getCantidadVidaAlterada());
 
 				} else {
+					System.out.println("--------------------------------------------------------------------------------------");
 					System.out.println("Primero tienes que elgir tu anillo");
 					int opcionAnillos = 0;
+					System.out.println("--------------------------------------------------------------------------------------");
 					for (Anillos anillosPersonaje : anillos) {
 						System.out.println("Dime el anillo que queres");
 						System.out.println(opcionAnillos + " - " + anillosPersonaje.toString());
@@ -74,28 +95,38 @@ public class ElecionObjetos {
 				}
 				break;
 			case 2:
+				System.out.println("--------------------------------------------------------------------------------------");
 				System.out.println("Ahora tienes que elegir tu arma ");
+				System.out.println("--------------------------------------------------------------------------------------");
 				System.out.println("Quieres crear tu espada (si/no)");
 				String elecionCrearEspada = letras.nextLine();
 				elecionCrearEspada = Comprobaciones.comprobacionNombre(elecionCrearEspada);
 
 				if (elecionCrearEspada.equalsIgnoreCase("si")) {
+					System.out.println("--------------------------------------------------------------------------------------");
 					System.out.println("Dime el nombre que le quieres asignar a  tu arma");
 					String nombre = letras.nextLine();
 					nombre = Comprobaciones.comprobacionNombre(nombre);
+					System.out.println("--------------------------------------------------------------------------------------");
 					System.out.println("Añade un lore a tu arma");
 					String lore = letras.nextLine();
+					System.out.println("--------------------------------------------------------------------------------------");
 					System.out.println("Dime  tu tipo de arma (Te recomeindo espadon la mejor opcion)");
 					String tipoArama = letras.nextLine();
 					tipoArama = Comprobaciones.comprobacionNombre(tipoArama);
+					System.out.println("--------------------------------------------------------------------------------------");
 					System.out.println("Dime cuanto daño va a hacer tu espada");
 					int danio = numeros.nextInt();
+					System.out.println("--------------------------------------------------------------------------------------");
 					System.out.println("Dime el tipo de daño");
 					String tipoDanio = letras.nextLine();
+					System.out.println("--------------------------------------------------------------------------------------");
 					tipoDanio = Comprobaciones.comprobacionNombre(tipoDanio);
 					System.out.println("Dime cunato va a pesar");
 					double peso = numeros.nextDouble();
+					
 					System.out.println("Arma creada");
+					System.out.println("--------------------------------------------------------------------------------------");
 					System.out.println(
 							"Quieres añadrira a la lista de armas de jefes primarios o secundarios? (primarios/secundarios)");
 					String eleccionTipoArmas = letras.nextLine();
@@ -106,14 +137,17 @@ public class ElecionObjetos {
 						armasSecundarias.add(new Armas(nombre, lore, tipoArama, danio, tipoDanio, peso));
 					}
 				} else {
+					System.out.println("--------------------------------------------------------------------------------------");
 					System.out.println("Quieres armas de jefes primarios (si/no)");
 					String eleccionTipoArmas = letras.nextLine();
 					eleccionTipoArmas = Comprobaciones.comprobacionNombre(eleccionTipoArmas);
 					if (eleccionTipoArmas.equalsIgnoreCase("si")) {
+						System.out.println("--------------------------------------------------------------------------------------");
 						System.out.println("Primero tienes que elgir tu arma");
 						int opcionArma = 0;
 						int contadorArmas = 0;
 						for (Armas armasPersonaje : armasPrimarias) {
+							System.out.println("--------------------------------------------------------------------------------------");
 							System.out.println("Dime el arma que queres");
 							System.out.println(contadorArmas + " - " + armasPersonaje.toString());
 							contadorArmas++;
@@ -124,10 +158,12 @@ public class ElecionObjetos {
 						personajePrincipal.pesoCargado(armasPrimarias.get(opcionArma).getPeso());
 						personajePrincipal.ataqueAlterado(armasPrimarias.get(opcionArma).getDanio());
 					} else {
+						System.out.println("--------------------------------------------------------------------------------------");
 						System.out.println("Primero tienes que elgir tu arma ");
 						int opcionArma = 0;
 						int contadorArmas = 0;
 						for (Armas armasPersonaje : armasSecundarias) {
+							System.out.println("--------------------------------------------------------------------------------------");
 							System.out.println("Dime el arma que queres");
 							System.out.println(contadorArmas + " - " + armasPersonaje.toString());
 							contadorArmas++;
@@ -143,24 +179,30 @@ public class ElecionObjetos {
 
 				break;
 			case 3:
+				System.out.println("--------------------------------------------------------------------------------------");
 				System.out.println("Ahora tienes que elegir tu armadura o crearte tu la tuya.");
 				System.out.println("Quieres crear tu armadura (si/no)");
 				String elecionCrearArmadura = letras.nextLine();
 				elecionCrearArmadura = Comprobaciones.comprobacionNombre(elecionCrearArmadura);
+				System.out.println("--------------------------------------------------------------------------------------");
 				if (elecionCrearArmadura.equalsIgnoreCase("si")) {
 					System.out.println("Dime el nombre que le quieres asignar a  tu armadura");
 					String nombre = letras.nextLine();
+					System.out.println("--------------------------------------------------------------------------------------");
 					nombre = Comprobaciones.comprobacionNombre(nombre);
 					System.out.println("Añade un lore a tu armadura");
+					System.out.println("--------------------------------------------------------------------------------------");
 					String lore = letras.nextLine();
 					System.out.println("Dime  tu tipo de armadura");
 					String tipoArmadura = letras.nextLine();
 					tipoArmadura = Comprobaciones.comprobacionNombre(tipoArmadura);
+					System.out.println("--------------------------------------------------------------------------------------");
 					System.out.println("Dime cuanto daño va a mitigar tu armadura");
 
 					int danioMitigado = numeros.nextInt();
 					System.out.println("y cuanto va a pesar");
 					double pesoArmadura = numeros.nextDouble();
+					System.out.println("--------------------------------------------------------------------------------------");
 					System.out.println(
 							"Quieres añadrira a la lista de armaduras de jefes primarios o secundarios? (primarios/secundarios)");
 					String eleccionTipoArmaduras = letras.nextLine();
@@ -172,14 +214,17 @@ public class ElecionObjetos {
 					}
 
 				} else {
+					System.out.println("--------------------------------------------------------------------------------------");
 					System.out.println("Quieres armaduras de jefes primarios (si/no)");
 					String eleccionTipoArmaduras = letras.nextLine();
 					eleccionTipoArmaduras = Comprobaciones.comprobacionNombre(eleccionTipoArmaduras);
 					if (eleccionTipoArmaduras.equalsIgnoreCase("si")) {
+						System.out.println("--------------------------------------------------------------------------------------");
 						System.out.println("Primero tienes que elgir tu armadura");
 						int opcionArmadura = 0;
 						int contadorArmadura = 0;
 						for (Armaduras armaduraPersonaje : armaduraPrimarias) {
+							System.out.println("--------------------------------------------------------------------------------------");
 							System.out.println("Dime el arma que queres");
 							System.out.println(contadorArmadura + " - " + armaduraPersonaje.toString());
 							contadorArmadura++;
@@ -190,11 +235,12 @@ public class ElecionObjetos {
 						personajePrincipal.pesoCargado(armaduraPrimarias.get(opcionArmadura).getPeso());
 						personajePrincipal.vidaAlterada(armaduraPrimarias.get(opcionArmadura).getProteccion());
 					} else {
-
+						System.out.println("--------------------------------------------------------------------------------------");
 						System.out.println("Primero tienes que elgir tu armadura");
 						int opcionArmadura = 0;
 						int contadorArmadura = 0;
 						for (Armaduras armaduraPersonaje : armaduraSecundarias) {
+							System.out.println("--------------------------------------------------------------------------------------");
 							System.out.println("Dime el arma que queres");
 							System.out.println(contadorArmadura + " - " + armaduraPersonaje.toString());
 							contadorArmadura++;

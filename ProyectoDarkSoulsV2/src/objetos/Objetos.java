@@ -54,22 +54,7 @@ public class Objetos {
 			return "El objetos es " + nombre + ", su lore es " + lore + "y  pertenecia al Jefe"
 					+ perteneciaJefe + "]";
 		}
-		public String tipoObjetoSegunPeso (double peso) {
-			if(peso>0 && peso<20 ) {
-				return "super lijero";
-			}
-			if(peso>0 && peso<40 ) {
-				return "lijero";
-			}
-			if(peso>0 && peso<50 ) {
-				return "peso medio";
-			}
-			if(peso>0 && peso>50 ) {
-				return "pesado";
-			}
-			return null;
-			
-		}
+	
 	
 		
 		

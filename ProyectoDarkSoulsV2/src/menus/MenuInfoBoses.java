@@ -83,9 +83,11 @@ public class MenuInfoBoses {
 		System.out.println("Por que opcion los quiere ordenar");
 		int numEleccion ;
 		do {
+			System.out.println("--------------------------------------------------------------------------------------");
 			System.out.println("1-Por ataque");
 			System.out.println("2-Por vida");
 			System.out.println("3-Salir");
+			System.out.println("--------------------------------------------------------------------------------------");
 			numEleccion = numerosMenu.nextInt();
 			switch(numEleccion) {
 			case 1:

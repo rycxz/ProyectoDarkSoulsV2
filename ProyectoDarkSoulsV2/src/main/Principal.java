@@ -62,12 +62,14 @@ public class Principal {
 				armasPrimarias, armasSecundarias, numerosMenuPrincipal, letrasMenuPrincipal);
 		int numMenu = 0;
 		do {
+			System.out.println("--------------------------------------------------------------------------------------");
 			System.out.println("Opciones a elegir:");
 			System.out.println("1-Combate contra jefes");
 			System.out.println("2-Infromación jefes");
 			System.out.println("3-Infromación objetos");
 			System.out.println("4-Menu Personaje");
 			System.out.println("5-Salir");
+			System.out.println("--------------------------------------------------------------------------------------");
 			numMenu = numerosMenuPrincipal.nextInt();
 			switch (numMenu) {
 			case 1:

@@ -8,6 +8,11 @@ import objetos.Armaduras;
 
 
 public class CargaDatosArmaduras {
+	/**
+	 *  metodo que devuelve un arraylist  cargad ocon los datos que yo le he proporcionado
+	 *  @param jefes el array list cargado 
+	 * @return
+	 */
 	public  static ArrayList<Armaduras> cargaDatosArmadurasPrimarias(ArrayList<JefesPrincipales> jefes) {
 		String[] nombreArmaduras = { "Lanza Dragón", "Gran Mazo de Smough", "Gran Espada del Señor de la Ceniza",
 				"Gran Espada de Artorias", "Espada Oscura del Rey" };
@@ -30,7 +35,11 @@ public class CargaDatosArmaduras {
 		return armaduras;
 
 	}
-
+	/**
+	 *  metodo que devuelve un arraylist  cargad ocon los datos que yo le he proporcionado
+	 *  @param jefes el array list cqrgado 
+	 * @return
+	 */
 	public  static ArrayList<Armaduras> cargaDatosArmadurasSecundarias(ArrayList<JefesSecundarios>  jefes) {
 		String[] nombreArmaduras = {"Armadura de Havel", "Armadura del Gólem", "Armadura del Gólem de Hierro", "Armadura del Demonio Capra",
 				"Armadura de Gwyndolin"  };

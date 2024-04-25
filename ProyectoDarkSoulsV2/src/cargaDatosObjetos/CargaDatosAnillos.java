@@ -5,6 +5,10 @@ import java.util.ArrayList;
 import objetos.Anillos;
 
 public class CargaDatosAnillos {
+	/**
+	 *  metodo que devuelve un arraylist  cargad ocon los datos que yo le he proporcionado
+	 * @return
+	 */
 	public  static ArrayList<Anillos> caraDatos() {
 		String[] nombreAnillosDanVida = { "Anillo de Acero de Protección", "Anillo de Acero de Protección Azul",
 				"Anillo de Corazón de Hueso de Dragón", "Anillo de Corazón de Hierro", "Anillo de Corazón de Plata",

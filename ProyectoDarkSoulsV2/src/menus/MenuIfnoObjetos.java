@@ -32,12 +32,16 @@ public class MenuIfnoObjetos {
 		System.out.println("");
 		System.out.println("Tienes varias opciones:");
 		int numEleccionObjetos = 0;
-	
+
 		do {
+			System.out
+					.println("--------------------------------------------------------------------------------------");
 			System.out.println("1-Mostrar todos los datos de los objetos que eligas");
 			System.out.println("2-Buscar Objetos");
 			System.out.println("3-Eliminar Objetos ");
 			System.out.println("4-Salir");
+			System.out
+					.println("--------------------------------------------------------------------------------------");
 			numEleccionObjetos = numeros.nextInt();
 			switch (numEleccionObjetos) {
 			case 1:
@@ -45,12 +49,17 @@ public class MenuIfnoObjetos {
 				System.out.println("----------------------------------------");
 				int num;
 				do {
+					System.out.println(
+							"--------------------------------------------------------------------------------------");
 					System.out.println();
 					System.out.println("Dime que quieres que te muestre ");
 					System.out.println("1-Anillos");
 					System.out.println("2-Armas");
 					System.out.println("3-Armaduras");
 					System.out.println("4-Salir");
+					System.out.println();
+					System.out.println(
+							"--------------------------------------------------------------------------------------");
 					num = numeros.nextInt();
 					switch (num) {
 					case 1:
@@ -58,8 +67,12 @@ public class MenuIfnoObjetos {
 						break;
 					case 2:
 						System.out.println(
+								"--------------------------------------------------------------------------------------");
+						System.out.println(
 								"Quieres ver las armas de los jefes (1)primarios o (2)secundarios (3 para salir)");
 						int numArmas;
+						System.out.println(
+								"--------------------------------------------------------------------------------------");
 						do {
 							System.out.println("dime tu opcion");
 							numArmas = numeros.nextInt();
@@ -79,6 +92,8 @@ public class MenuIfnoObjetos {
 						} while (numArmas != 3);
 						break;
 					case 3:
+						System.out.println(
+								"--------------------------------------------------------------------------------------");
 						System.out.println(
 								"Quieres ver las armaduras de los jefes (1)primarios o (2)secundarios (3 para salir)");
 						int numArmaduras;
@@ -100,8 +115,9 @@ public class MenuIfnoObjetos {
 							}
 						} while (numArmaduras != 3);
 						break;
-				
+
 					case 4:
+						
 						System.out.println("Ha salido!");
 						break;
 					default:
@@ -111,29 +127,35 @@ public class MenuIfnoObjetos {
 				break;
 			case 2:
 				String nombre;
+				System.out.println("--------------------------------------------------------------------------------------");
 				System.out.println("Ahora vamos a buscar objetos por su nombre o tipo ");
 				System.out.println("Las opciones que tiene son: ");
 				System.out.println("----------------------------------------");
 				int numBuscar = 0;
 				do {
 					System.out.println();
+					System.out.println("--------------------------------------------------------------------------------------");
 					System.out.println("Dime que quieres que te muestre ");
 					System.out.println("1-Anillos");
 					System.out.println("2-Armas");
 					System.out.println("3-Armaduras");
 					System.out.println("4-Salir");
+					System.out.println("--------------------------------------------------------------------------------------");
 					num = numeros.nextInt();
 					switch (num) {
 					case 1:
+						System.out.println("--------------------------------------------------------------------------------------");
 						System.out.println("Dime el nombre por el cual quieres buscar!");
 						nombre = letras.nextLine();
 						nombre = Comprobaciones.comprobacionNombre(nombre);
 						SalidaDatosObjetos.mostrarAnillosNombre(anillos, nombre);
 						break;
 					case 2:
+						System.out.println("--------------------------------------------------------------------------------------");
 						System.out.println("Dime el nombre por el cual quieres buscar!");
 						nombre = letras.nextLine();
 						nombre = Comprobaciones.comprobacionNombre(nombre);
+						System.out.println("--------------------------------------------------------------------------------------");
 						System.out.println(
 								"Quieres ver las armas de los jefes (1)primarios o (2)secundarios (3 para salir)");
 						int numArmas;
@@ -157,9 +179,11 @@ public class MenuIfnoObjetos {
 
 						break;
 					case 3:
+						System.out.println("--------------------------------------------------------------------------------------");
 						System.out.println("Dime el nombre por el cual quieres buscar!");
 						nombre = letras.nextLine();
 						nombre = Comprobaciones.comprobacionNombre(nombre);
+						System.out.println("--------------------------------------------------------------------------------------");
 						System.out.println(
 								"Quieres ver las armaduras de los jefes (1)primarios o (2)secundarios (3 para salir)");
 						int numArmaduras;
@@ -191,6 +215,7 @@ public class MenuIfnoObjetos {
 
 				break;
 			case 3:
+				System.out.println("--------------------------------------------------------------------------------------");
 				System.out.println("Estas en la opcion de eliminar un objeto!");
 				System.out.println();
 				System.out.println("Las opciones que tiene son: ");
@@ -198,22 +223,26 @@ public class MenuIfnoObjetos {
 				int numBuscarEliminar = 0;
 				do {
 					System.out.println();
+					System.out.println("--------------------------------------------------------------------------------------");
 					System.out.println("Dime que quieres que te muestre ");
 					System.out.println("1-Anillos");
 					System.out.println("2-Armas");
 					System.out.println("3-Armaduras");
 					System.out.println("4-Salir");
+					System.out.println("--------------------------------------------------------------------------------------");
 					num = numeros.nextInt();
 					switch (num) {
 					case 1:
+						System.out.println("--------------------------------------------------------------------------------------");
 						System.out.println("Dime el nombre del anillo que quieres eliminar");
 						String nombreAnillo = letras.nextLine();
 						nombreAnillo = Comprobaciones.comprobacionNombre(nombreAnillo);
 						EliminarObjetos.eliminarAnillosNombre(anillos, nombreAnillo);
 						break;
 					case 2:
+						System.out.println("--------------------------------------------------------------------------------------");
 						System.out.println("Dime el nombre  del arma por el cual quieres buscar!");
-					
+
 						System.out.println(
 								"Quieres ver las armas de los jefes (1)primarios o (2)secundarios (3 para salir)");
 						int numArmas;
@@ -222,15 +251,19 @@ public class MenuIfnoObjetos {
 							numArmas = numeros.nextInt();
 							switch (numArmas) {
 							case 1:
+								System.out.println("--------------------------------------------------------------------------------------");
 								System.out.println("Dime el nombre del anillo que quieres eliminar");
 								String nombreArmaPrimariaEliminar = letras.nextLine();
-								nombreArmaPrimariaEliminar = Comprobaciones.comprobacionNombre(nombreArmaPrimariaEliminar);
+								nombreArmaPrimariaEliminar = Comprobaciones
+										.comprobacionNombre(nombreArmaPrimariaEliminar);
 								EliminarObjetos.eliminarArmasNombre(armasPrimarias, nombreArmaPrimariaEliminar);
 								break;
 							case 2:
+								System.out.println("--------------------------------------------------------------------------------------");
 								System.out.println("Dime el nombre del anillo que quieres eliminar");
 								String nombreArmaSecundariaEliminar = letras.nextLine();
-								nombreArmaSecundariaEliminar = Comprobaciones.comprobacionNombre(nombreArmaSecundariaEliminar);
+								nombreArmaSecundariaEliminar = Comprobaciones
+										.comprobacionNombre(nombreArmaSecundariaEliminar);
 								EliminarObjetos.eliminarArmasNombre(armasSecundarias, nombreArmaSecundariaEliminar);
 								break;
 							case 3:
@@ -240,29 +273,37 @@ public class MenuIfnoObjetos {
 								System.out.println("Opcion no valida");
 							}
 						} while (numArmas != 3);
-						
+
 						break;
 					case 3:
+						System.out.println("--------------------------------------------------------------------------------------");
 						System.out.println("Dime el nombre  del armadura por el cual quieres buscar!");
-						
+
 						System.out.println(
 								"Quieres ver las armadura de los jefes (1)primarios o (2)secundarios (3 para salir)");
 						int numArmadurasEliminar;
+						System.out.println("--------------------------------------------------------------------------------------");
 						do {
 							System.out.println("dime tu opcion");
 							numArmadurasEliminar = numeros.nextInt();
 							switch (numArmadurasEliminar) {
 							case 1:
+								System.out.println("--------------------------------------------------------------------------------------");
 								System.out.println("Dime el nombre del armadura que quieres eliminar");
 								String nombreArmaduraPrimariaEliminar = letras.nextLine();
-								nombreArmaduraPrimariaEliminar = Comprobaciones.comprobacionNombre(nombreArmaduraPrimariaEliminar);
-								EliminarObjetos.eliminarArmadurasNombre(armaduraPrimarias, nombreArmaduraPrimariaEliminar);
+								nombreArmaduraPrimariaEliminar = Comprobaciones
+										.comprobacionNombre(nombreArmaduraPrimariaEliminar);
+								EliminarObjetos.eliminarArmadurasNombre(armaduraPrimarias,
+										nombreArmaduraPrimariaEliminar);
 								break;
 							case 2:
+								System.out.println("--------------------------------------------------------------------------------------");
 								System.out.println("Dime el nombre del anillo que quieres eliminar");
 								String nombreArmaduraSecundariaEliminar = letras.nextLine();
-								nombreArmaduraSecundariaEliminar = Comprobaciones.comprobacionNombre(nombreArmaduraSecundariaEliminar);
-								EliminarObjetos.eliminarArmadurasNombre(armaduraSecundarias, nombreArmaduraSecundariaEliminar);
+								nombreArmaduraSecundariaEliminar = Comprobaciones
+										.comprobacionNombre(nombreArmaduraSecundariaEliminar);
+								EliminarObjetos.eliminarArmadurasNombre(armaduraSecundarias,
+										nombreArmaduraSecundariaEliminar);
 								break;
 							case 3:
 								System.out.println("Ha salido ");
@@ -275,12 +316,12 @@ public class MenuIfnoObjetos {
 					case 4:
 						System.out.println("Ha salido!");
 						break;
-						default:
-							System.out.println("Opcion no valida");
+					default:
+						System.out.println("Opcion no valida");
 					}
-				
-				}while(numBuscarEliminar!=4);
-					break;
+
+				} while (numBuscarEliminar != 4);
+				break;
 			case 4:
 				System.out.println("Ha salido");
 				break;

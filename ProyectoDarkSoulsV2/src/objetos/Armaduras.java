@@ -67,11 +67,7 @@ public class Armaduras extends Objetos{
 	/* (non-Javadoc)
 	 * @see objetos.Objetos#tipoObjetoSegunPeso(double)
 	 */
-	@Override
-	public String tipoObjetoSegunPeso(double peso) {
-		// TODO Auto-generated method stub
-		return super.tipoObjetoSegunPeso(peso);
-	}
+
 
 
 	
